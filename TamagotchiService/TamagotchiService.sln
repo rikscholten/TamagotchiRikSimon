@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TamagotchiService", "TamagotchiService\TamagotchiService.csproj", "{69827A5C-BDA6-4B12-B68E-AF3FAADBC934}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TamagotchiDomain", "TamagotchiDomain\TamagotchiDomain.csproj", "{275ABED4-7835-431E-A3DA-246577FD6681}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TamagotchiDatabase", "TamagotchiDatabase\TamagotchiDatabase.sqlproj", "{F3982281-DA90-41A5-8A04-C6ABCE243756}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TamagotchiWeb", "TamagotchiWeb\TamagotchiWeb.csproj", "{0F210845-8A63-4574-9BF1-31121AEB8F31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,20 @@ Global
 		{69827A5C-BDA6-4B12-B68E-AF3FAADBC934}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69827A5C-BDA6-4B12-B68E-AF3FAADBC934}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69827A5C-BDA6-4B12-B68E-AF3FAADBC934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{275ABED4-7835-431E-A3DA-246577FD6681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{275ABED4-7835-431E-A3DA-246577FD6681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{275ABED4-7835-431E-A3DA-246577FD6681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{275ABED4-7835-431E-A3DA-246577FD6681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3982281-DA90-41A5-8A04-C6ABCE243756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3982281-DA90-41A5-8A04-C6ABCE243756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3982281-DA90-41A5-8A04-C6ABCE243756}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F3982281-DA90-41A5-8A04-C6ABCE243756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3982281-DA90-41A5-8A04-C6ABCE243756}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3982281-DA90-41A5-8A04-C6ABCE243756}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0F210845-8A63-4574-9BF1-31121AEB8F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F210845-8A63-4574-9BF1-31121AEB8F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F210845-8A63-4574-9BF1-31121AEB8F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F210845-8A63-4574-9BF1-31121AEB8F31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

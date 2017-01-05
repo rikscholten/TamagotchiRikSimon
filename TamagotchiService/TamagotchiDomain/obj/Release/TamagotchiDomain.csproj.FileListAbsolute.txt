@@ -1,0 +1,10 @@
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\bin\Release\TamagotchiDomain.dll.config
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\bin\Release\TamagotchiDomain.dll
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\bin\Release\TamagotchiDomain.pdb
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\bin\Release\EntityFramework.dll
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\bin\Release\EntityFramework.xml
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\obj\Release\TamagotchiDomain.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\obj\Release\TamagotchiDomain.dll
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\obj\Release\TamagotchiDomain.pdb

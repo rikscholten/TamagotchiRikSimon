@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using TamagotchiDomain;
 
 namespace TamagotchiService
 {
@@ -14,34 +15,87 @@ namespace TamagotchiService
     {
 
         [OperationContract]
-        string GetData(int value);
+        Tamagotchi GetTamagotchi(int id);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        IEnumerable<Tamagotchi> GetTamagotchis();
+
+        [OperationContract]
+        void AddTamagotchi(Tamagotchi tdamagotchi);
+
+        //acties
+        [OperationContract]
+        void FeedTamagotchi(int id);
+
+        [OperationContract]
+        void SleepTamagotchi(int id);
+
+        [OperationContract]
+        void PlayTamagotchi(int id);
+
+        [OperationContract]
+        void HugTamagotchi(int id);
 
         // TODO: Add your service operations here
     }
 
-
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
+    
     [DataContract]
-    public class CompositeType
+    public class Tamagotchi
     {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
+        public Tamagotchi()
         {
-            get { return boolValue; }
-            set { boolValue = value; }
+
         }
 
-        [DataMember]
-        public string StringValue
+        public Tamagotchi(TamagotchiDomain.Tamagot t)
         {
-            get { return stringValue; }
-            set { stringValue = value; }
+            Id = t.Id;
+            Naam = t.Naam;
+            Leeftijd = t.Leeftijd;
+            Honger = t.Honger;
+            Slaap = t.Slaap;
+            Verveling = t.Verveling;
+            Gezondheid = t.Gezondheid;
+        }
+        
+
+        [DataMember]
+        public int Id { get; }
+
+        [DataMember]
+        public string Naam { get; set; }
+
+        [DataMember]
+        public int Leeftijd { get; set; }
+
+
+        [DataMember]
+        public int Honger { get; set; }
+
+        [DataMember]
+        public int Slaap { get; set; }
+
+        [DataMember]
+        public int Verveling { get; set; }
+
+        [DataMember]
+        public int Gezondheid { get; set; }
+
+        internal TamagotchiDomain.Tamagot toPoco()
+        {
+            return new TamagotchiDomain.Tamagot()
+            {
+                Id = this.Id,
+                Naam = this.Naam,
+                Leeftijd = this.Leeftijd,
+                Honger = this.Honger,
+                Slaap = this.Slaap,
+                Verveling = this.Verveling,
+                Gezondheid = this.Gezondheid,
+            };
         }
     }
+    // Use a data contract as illustrated in the sample below to add composite types to service operations.
+
 }

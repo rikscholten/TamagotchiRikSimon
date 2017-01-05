@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="c53fe5c9-cc16-4c3d-ab91-3d3f7caf8bc1" ChangeDateTime="01/05/2017 16:06:51">
+    <Property Name="ElementName" Value="[dbo].[Tamagot].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Tamagot]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Slaap" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8e482487-1df9-4a93-950c-504e81838100" ChangeDateTime="01/05/2017 16:06:53">
+    <Property Name="ElementName" Value="[dbo].[Tamagot].[Naam]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Tamagot]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="rveling" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c22abbff-bfe0-4da4-9a04-bce678933bb8" ChangeDateTime="01/05/2017 16:06:59">
+    <Property Name="ElementName" Value="[dbo].[Tamagot].[zondheid]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Tamagot]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Gezondheid" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2b71ee76-6180-498a-8513-533685742298" ChangeDateTime="01/05/2017 16:07:05">
+    <Property Name="ElementName" Value="[dbo].[Tamagot].[rveling]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Tamagot]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Verveling" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f209aa1a-bdc8-43d2-a3a0-7052ccf70651" ChangeDateTime="01/05/2017 16:07:12">
+    <Property Name="ElementName" Value="[dbo].[Tamagot].[Slaap]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Tamagot]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f6f9d360-1105-43aa-9d56-fad399a9ab1f" ChangeDateTime="01/05/2017 16:07:17">
+    <Property Name="ElementName" Value="[dbo].[Tamagot].[Verveling]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Tamagot]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Leeftijd" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5a7ce37e-b67e-4db2-9c74-7c2f64d6aa6b" ChangeDateTime="01/05/2017 16:07:20">
+    <Property Name="ElementName" Value="[dbo].[Tamagot].[Gezondheid]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Tamagot]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Honger" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1a9f58bf-141e-4ef4-b29d-fb6d829d7c02" ChangeDateTime="01/05/2017 16:07:55">
+    <Property Name="ElementName" Value="[dbo].[Tamagot].[Leeftijd]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Tamagot]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Naam" />
+  </Operation>
+</Operations>

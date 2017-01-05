@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TamagotchiRikSimonModelStoreContainer" CdmEntityContainer="TamagotchiRikSimonEntities">
+    <EntitySetMapping Name="Tamagot">
+      <EntityTypeMapping TypeName="TamagotchiRikSimonModel.Tamagot">
+        <MappingFragment StoreEntitySet="Tamagot">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="Leeftijd" ColumnName="Leeftijd" />
+          <ScalarProperty Name="Honger" ColumnName="Honger" />
+          <ScalarProperty Name="Slaap" ColumnName="Slaap" />
+          <ScalarProperty Name="Verveling" ColumnName="Verveling" />
+          <ScalarProperty Name="Gezondheid" ColumnName="Gezondheid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

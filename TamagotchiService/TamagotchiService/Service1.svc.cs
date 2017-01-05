@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using TamagotchiService.Data;
 
 namespace TamagotchiService
 {
@@ -12,22 +13,47 @@ namespace TamagotchiService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        public void AddTamagotchi(Tamagotchi tamagotchi)
         {
-            return string.Format("You entered: {0}", value);
+            using (var context = new TamagotchiContext())
+            {
+                context.Tamagotchi.Add(tamagotchi.toPoco());
+                context.SaveChanges();
+            }
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public void FeedTamagotchi(int id)
         {
-            if (composite == null)
+            throw new NotImplementedException();
+        }
+
+        public Tamagotchi GetTamagotchi(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Tamagotchi> GetTamagotchis()
+        {
+            using (var context = new TamagotchiContext())
             {
-                throw new ArgumentNullException("composite");
+                var tamagotchis = context.Tamagotchi.ToList();
+                return tamagotchis.Select(t => new Tamagotchi(t));
             }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+        }
+
+        public void HugTamagotchi(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PlayTamagotchi(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SleepTamagotchi(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
