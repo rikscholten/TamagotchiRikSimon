@@ -42,6 +42,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="EditTamagotchi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditTamagotchiResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetTamagotchis">
     <xs:complexType>
       <xs:sequence />

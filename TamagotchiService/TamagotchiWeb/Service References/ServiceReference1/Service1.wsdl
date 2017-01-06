@@ -51,6 +51,12 @@
   <wsdl:message name="IService1_GetTamagotchi_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetTamagotchiResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_EditTamagotchi_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditTamagotchi" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditTamagotchi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditTamagotchiResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetTamagotchis_InputMessage">
     <wsdl:part name="parameters" element="tns:GetTamagotchis" />
   </wsdl:message>
@@ -69,6 +75,10 @@
     <wsdl:operation name="GetTamagotchi">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTamagotchi" message="tns:IService1_GetTamagotchi_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTamagotchiResponse" message="tns:IService1_GetTamagotchi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditTamagotchi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EditTamagotchi" message="tns:IService1_EditTamagotchi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EditTamagotchiResponse" message="tns:IService1_EditTamagotchi_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetTamagotchis">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTamagotchis" message="tns:IService1_GetTamagotchis_InputMessage" />
@@ -97,6 +107,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetTamagotchi">
       <soap:operation soapAction="http://tempuri.org/IService1/GetTamagotchi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditTamagotchi">
+      <soap:operation soapAction="http://tempuri.org/IService1/EditTamagotchi" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -137,6 +156,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetTamagotchi">
       <soap:operation soapAction="http://tempuri.org/IService1/GetTamagotchi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditTamagotchi">
+      <soap:operation soapAction="http://tempuri.org/IService1/EditTamagotchi" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

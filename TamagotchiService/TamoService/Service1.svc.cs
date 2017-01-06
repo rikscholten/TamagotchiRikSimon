@@ -54,6 +54,16 @@ namespace TamoService
             }
         }
 
+        public void EditTamagotchi(int Id, string Name)
+        {
+            using (var context = new TamoContext())
+            {
+                context.Tamagots.ToList().Find(t => t.Id == Id).Naam=Name;
+                context.SaveChanges();
+
+            }
+        }
+
 
         //public CompositeType GetDataUsingDataContract(CompositeType composite)
         //{

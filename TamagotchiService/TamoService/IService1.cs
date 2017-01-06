@@ -27,6 +27,9 @@ namespace TamoService
         Tamagotchi GetTamagotchi(int Id);
 
         [OperationContract]
+        void EditTamagotchi(int Id,string Name);
+
+        [OperationContract]
         IEnumerable<Tamagotchi> GetTamagotchis();
 
         // TODO: Add your service operations here

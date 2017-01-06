@@ -33,7 +33,7 @@ namespace TamagotchiWeb.Controllers
             tam.Slaap = 0;
             tam.Verveling = 0;
 
-            service.AddTamagotchi(tam);
+            //service.AddTamagotchi(tam);
             List<ViewModels.Tamagotchi> tamagotchis = service.GetTamagotchis()
                 .Select(t => new ViewModels.Tamagotchi(t))
                 .ToList();
@@ -96,18 +96,17 @@ namespace TamagotchiWeb.Controllers
 
         // POST: Tamagotchi/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, ViewModels.Tamagotchi edittam)
         {
-            try
-            {
-                // TODO: Add update logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
+            if (!ModelState.IsValid)
             {
                 return View();
             }
+            service.EditTamagotchi(id,edittam.Naam);
+            
+            return RedirectToAction("Index");
+
         }
 
         // GET: Tamagotchi/Delete/5
