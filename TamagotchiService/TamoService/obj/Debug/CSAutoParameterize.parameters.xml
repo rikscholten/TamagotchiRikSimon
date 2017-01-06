@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="default-Web.config Connection String" description="default Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/DataModel.csdl|res://*/DataModel.ssdl|res://*/DataModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=tamagotchiriksimon.database.windows.net;initial catalog=TamagotchiRikSimon;persist security info=True;user id=tamagotchiriksimon;password=Riksimon123;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Admin\\Documents\\GitHub\\TamagotchiRikSimon\\TamagotchiService\\TamoService\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='default']/@connectionString" />
+  </parameter>
+  <parameter name="TamagotchiDomain.TamagotchiSimonRikEntities-Web.config Connection String" description="TamagotchiDomain.TamagotchiSimonRikEntities Connection String used in web.config by the application to access the database." defaultValue="TamagotchiDomain.TamagotchiSimonRikEntities_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Admin\\Documents\\GitHub\\TamagotchiRikSimon\\TamagotchiService\\TamoService\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TamagotchiDomain.TamagotchiSimonRikEntities']/@connectionString" />
+  </parameter>
+</parameters>

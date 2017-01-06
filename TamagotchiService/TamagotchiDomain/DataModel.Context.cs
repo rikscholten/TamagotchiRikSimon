@@ -16,7 +16,7 @@ namespace TamagotchiDomain
     public partial class TamagotchiSimonRikEntities : DbContext
     {
         public TamagotchiSimonRikEntities()
-            : base("name=TamagotchiSimonRik")
+            : base("name=TamagotchiSimonRikEntities")
         {
         }
     

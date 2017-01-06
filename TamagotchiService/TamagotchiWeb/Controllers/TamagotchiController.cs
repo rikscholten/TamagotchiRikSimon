@@ -33,7 +33,7 @@ namespace TamagotchiWeb.Controllers
             tam.Slaap = 0;
             tam.Verveling = 0;
 
-            //service.AddTamagotchi(tam);
+            service.AddTamagotchi(tam);
             List<ViewModels.Tamagotchi> tamagotchis = service.GetTamagotchis()
                 .Select(t => new ViewModels.Tamagotchi(t))
                 .ToList();

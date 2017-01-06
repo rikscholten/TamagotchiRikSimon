@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -16,9 +17,10 @@ namespace TamoService
     {
         public void AddTamagotchi(Tamagot t)
         {
+            Debug.WriteLine("test1");
             using (var context = new TamoContext())
             {
-                
+                Debug.WriteLine("test2");
                 context.Tamagots.Add(t);
                 context.SaveChanges();
             }
