@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="78fec40e-3052-4a8d-bea7-b6c8e4284abd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4e5499e6-a1c4-415f-9925-ac485ce337af" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://tamagotchisimonrik.azurewebsites.net/service1.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="0f439b57-91e4-434c-8f49-22d843884331" SourceId="1" SourceUrl="http://tamagotchisimonrik.azurewebsites.net/Service1.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="610c368b-b7ae-43e7-865b-b7a2b21ca193" SourceId="1" SourceUrl="http://tamagotchisimonrik.azurewebsites.net/Service1.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="c42b90e5-19e2-447e-94da-e185de7e9d58" SourceId="1" SourceUrl="http://tamagotchisimonrik.azurewebsites.net/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="563e09a3-0bec-4e93-a46f-1cb001136565" SourceId="1" SourceUrl="http://tamagotchisimonrik.azurewebsites.net/Service1.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="298cdca1-05ed-4623-84a8-8c120ef41099" SourceId="1" SourceUrl="http://tamagotchisimonrik.azurewebsites.net/Service1.svc?disco" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="f5f2e8d6-6a22-423e-8bcf-057d3111ec64" SourceId="1" SourceUrl="http://tamagotchisimonrik.azurewebsites.net/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="6ee5108d-91d6-48a5-9dab-9f95a7eafb94" SourceId="1" SourceUrl="http://tamagotchisimonrik.azurewebsites.net/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="b9582c95-a52d-496a-9399-2ab621a72828" SourceId="1" SourceUrl="http://tamagotchisimonrik.azurewebsites.net/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="58bb6b80-30e6-46c4-ab4a-d2801e58be67" SourceId="1" SourceUrl="http://tamagotchisimonrik.azurewebsites.net/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="d16c88d5-4246-4b56-9c3b-19c866d9ed77" SourceId="1" SourceUrl="http://tamagotchisimonrik.azurewebsites.net/Service1.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

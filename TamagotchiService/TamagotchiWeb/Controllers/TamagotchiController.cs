@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -8,21 +9,40 @@ namespace TamagotchiWeb.Controllers
 {
     public class TamagotchiController : Controller
     {
-        private TamagotchiService.IService1 _service;
+        
 
-        public TamagotchiController()
-        {
-            //kan dit slimmer?
-            this._service = new TamagotchiService.Service1Client("BasicHttpBinding_ITamagotchiService");
-        }
+        
         // GET: Tamagotchi
+        [HttpGet]
         public ActionResult Index()
         {
-            List<ViewModels.Tamagotchi> tamagotchis = _service.GetTamagotchis()
-                .Select(t => new ViewModels.Tamagotchi(t))
-                .ToList();
+            TamagotchiService.IService1 client = new TamagotchiService.Service1Client();
 
-            return View(tamagotchis);
+            var list = client.GetTamagotchis();
+
+            ViewBag.List = list;
+
+            int invoer = 0;
+            int uitkomst;
+            uitkomst = client.HugTamagotchi(invoer);
+
+            Debug.WriteLine("xxxxxxxxxxxxxxxxxxxxxxxxxxx");
+            Debug.WriteLine(uitkomst);
+            //client.Naam = "Rik";
+            //client.Leeftijd = 0;
+            //client.Gezondheid = 0;
+            //client.Honger = 0;
+            //client.Slaap = 0;
+            //client.Verveling = 0;
+            //Debug.WriteLine(client.Naam);
+            Debug.WriteLine("xxxxxxxxxxxxxxxxxxxxxxxxxxx");
+
+            //Debug.WriteLine(_service.GetTamagotchis());
+            //List<TamagotchiService.Tamagotchi> tamagotchis = _service.GetTamagotchis()
+            //    .Select(t => new TamagotchiService.Tamagotchi())
+            //    .ToList();
+
+            return View();
         }
 
         // GET: Tamagotchi/Details/5

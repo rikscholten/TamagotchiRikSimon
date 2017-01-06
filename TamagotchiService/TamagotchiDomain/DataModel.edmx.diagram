@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="b5bd39a74b6b44fcb64b005639a4d92f" Name="Diagram1">
-        <EntityTypeShape EntityType="TamagotchiRikSimonModel.Tamagot" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TamagotchiSimonRikModel.Tamagot" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

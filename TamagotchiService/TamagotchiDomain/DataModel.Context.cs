@@ -13,10 +13,10 @@ namespace TamagotchiDomain
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TamagotchiRikSimonEntities : DbContext
+    public partial class TamagotchiSimonRikEntities : DbContext
     {
-        public TamagotchiRikSimonEntities()
-            : base("name=TamagotchiRikSimonEntities")
+        public TamagotchiSimonRikEntities()
+            : base("name=TamagotchiSimonRik")
         {
         }
     

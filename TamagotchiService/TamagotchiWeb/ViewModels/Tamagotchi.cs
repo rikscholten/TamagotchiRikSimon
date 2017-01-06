@@ -13,7 +13,6 @@ namespace TamagotchiWeb.ViewModels
 
         public Tamagotchi(TamagotchiService.Tamagotchi t)
         {
-            Id = t.Id;
             Naam = t.Naam;
             Leeftijd = t.Leeftijd;
             Honger = t.Honger;

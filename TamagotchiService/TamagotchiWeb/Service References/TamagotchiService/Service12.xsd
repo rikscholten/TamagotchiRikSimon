@@ -30,7 +30,7 @@
   <xs:element name="AddTamagotchi">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TamagotchiService" minOccurs="0" name="tdamagotchi" nillable="true" type="q3:Tamagotchi" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TamagotchiService" minOccurs="0" name="tamagotchi" nillable="true" type="q3:Tamagotchi" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -84,7 +84,9 @@
   </xs:element>
   <xs:element name="HugTamagotchiResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HugTamagotchiResult" type="xs:int" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>

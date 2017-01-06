@@ -23,3 +23,5 @@ C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiS
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiService\bin\Microsoft.ApplicationInsights.xml
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiService\obj\Debug\TamagotchiService.dll
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiService\obj\Debug\TamagotchiService.pdb
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiService\bin\TamagotchiService.dll.CodeAnalysisLog.xml
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiService\bin\TamagotchiService.dll.lastcodeanalysissucceeded

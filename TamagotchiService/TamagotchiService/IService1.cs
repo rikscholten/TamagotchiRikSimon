@@ -21,7 +21,7 @@ namespace TamagotchiService
         IEnumerable<Tamagotchi> GetTamagotchis();
 
         [OperationContract]
-        void AddTamagotchi(Tamagotchi tdamagotchi);
+        void AddTamagotchi(Tamagotchi tamagotchi);
 
         //acties
         [OperationContract]
@@ -34,7 +34,7 @@ namespace TamagotchiService
         void PlayTamagotchi(int id);
 
         [OperationContract]
-        void HugTamagotchi(int id);
+        int HugTamagotchi(int id);
 
         // TODO: Add your service operations here
     }
@@ -50,7 +50,6 @@ namespace TamagotchiService
 
         public Tamagotchi(TamagotchiDomain.Tamagot t)
         {
-            Id = t.Id;
             Naam = t.Naam;
             Leeftijd = t.Leeftijd;
             Honger = t.Honger;
@@ -68,7 +67,6 @@ namespace TamagotchiService
 
         [DataMember]
         public int Leeftijd { get; set; }
-
 
         [DataMember]
         public int Honger { get; set; }

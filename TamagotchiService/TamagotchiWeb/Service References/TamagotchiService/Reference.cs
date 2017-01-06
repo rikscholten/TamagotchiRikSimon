@@ -171,10 +171,10 @@ namespace TamagotchiWeb.TamagotchiService {
         System.Threading.Tasks.Task<TamagotchiWeb.TamagotchiService.Tamagotchi[]> GetTamagotchisAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddTamagotchi", ReplyAction="http://tempuri.org/IService1/AddTamagotchiResponse")]
-        void AddTamagotchi(TamagotchiWeb.TamagotchiService.Tamagotchi tdamagotchi);
+        void AddTamagotchi(TamagotchiWeb.TamagotchiService.Tamagotchi tamagotchi);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddTamagotchi", ReplyAction="http://tempuri.org/IService1/AddTamagotchiResponse")]
-        System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiWeb.TamagotchiService.Tamagotchi tdamagotchi);
+        System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiWeb.TamagotchiService.Tamagotchi tamagotchi);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/FeedTamagotchi", ReplyAction="http://tempuri.org/IService1/FeedTamagotchiResponse")]
         void FeedTamagotchi(int id);
@@ -195,10 +195,10 @@ namespace TamagotchiWeb.TamagotchiService {
         System.Threading.Tasks.Task PlayTamagotchiAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/HugTamagotchi", ReplyAction="http://tempuri.org/IService1/HugTamagotchiResponse")]
-        void HugTamagotchi(int id);
+        int HugTamagotchi(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/HugTamagotchi", ReplyAction="http://tempuri.org/IService1/HugTamagotchiResponse")]
-        System.Threading.Tasks.Task HugTamagotchiAsync(int id);
+        System.Threading.Tasks.Task<int> HugTamagotchiAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -244,12 +244,12 @@ namespace TamagotchiWeb.TamagotchiService {
             return base.Channel.GetTamagotchisAsync();
         }
         
-        public void AddTamagotchi(TamagotchiWeb.TamagotchiService.Tamagotchi tdamagotchi) {
-            base.Channel.AddTamagotchi(tdamagotchi);
+        public void AddTamagotchi(TamagotchiWeb.TamagotchiService.Tamagotchi tamagotchi) {
+            base.Channel.AddTamagotchi(tamagotchi);
         }
         
-        public System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiWeb.TamagotchiService.Tamagotchi tdamagotchi) {
-            return base.Channel.AddTamagotchiAsync(tdamagotchi);
+        public System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiWeb.TamagotchiService.Tamagotchi tamagotchi) {
+            return base.Channel.AddTamagotchiAsync(tamagotchi);
         }
         
         public void FeedTamagotchi(int id) {
@@ -276,11 +276,11 @@ namespace TamagotchiWeb.TamagotchiService {
             return base.Channel.PlayTamagotchiAsync(id);
         }
         
-        public void HugTamagotchi(int id) {
-            base.Channel.HugTamagotchi(id);
+        public int HugTamagotchi(int id) {
+            return base.Channel.HugTamagotchi(id);
         }
         
-        public System.Threading.Tasks.Task HugTamagotchiAsync(int id) {
+        public System.Threading.Tasks.Task<int> HugTamagotchiAsync(int id) {
             return base.Channel.HugTamagotchiAsync(id);
         }
     }

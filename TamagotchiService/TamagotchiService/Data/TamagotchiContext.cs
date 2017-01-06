@@ -9,12 +9,13 @@ namespace TamagotchiService.Data
 {
     public class TamagotchiContext : DbContext
     {
-            public TamagotchiContext() : base("name=default")
+
+            public TamagotchiContext() : base("name=TamagotchiSimonRik")
             {
 
             }
 
-            public DbSet<TamagotchiDomain.Tamagot> Tamagotchi { get; set; }
+            public DbSet<Tamagot> Tamagotchi { get; set; }
 
         
     }

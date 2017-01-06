@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="TamagotchiRikSimonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="TamagotchiSimonRikModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Tamagot">
     <Key>
       <PropertyRef Name="Id" />
@@ -12,7 +12,7 @@
     <Property Name="Verveling" Type="Int32" Nullable="false" />
     <Property Name="Gezondheid" Type="Int32" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="TamagotchiRikSimonEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="TamagotchiSimonRikEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Tamagot" EntityType="Self.Tamagot" />
   </EntityContainer>
 </Schema>
