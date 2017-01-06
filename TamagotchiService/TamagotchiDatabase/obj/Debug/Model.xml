@@ -34,7 +34,6 @@
 			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
 			<Property Name="IsTornPageProtectionOn" Value="False" />
 			<Property Name="IsFullTextEnabled" Value="True" />
-			<Property Name="CompatibilityMode" Value="130" />
 			<Property Name="PageVerifyMode" Value="3" />
 			<Property Name="DefaultLanguage" Value="" />
 			<Property Name="DefaultFullTextLanguage" Value="" />

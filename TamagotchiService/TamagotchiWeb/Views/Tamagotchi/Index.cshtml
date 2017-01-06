@@ -1,19 +1,7 @@
 ﻿
+@{
+    ViewBag.Title = "View";
+}
 
-<h2>Index</h2>
+<h2>View</h2>
 
-<div>
-    <h4>Tamagotchi</h4>
-    <hr />
-        
-    <table>
-        @foreach (var tama in ViewBag.List)
-        {
-            <tr>
-                <td>
-                    @tama.Naam
-                </td>
-            </tr>
-        }
-    </table>
-</div>

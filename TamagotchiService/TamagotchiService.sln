@@ -11,6 +11,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TamagotchiDatabase", "Tamag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TamagotchiWeb", "TamagotchiWeb\TamagotchiWeb.csproj", "{0F210845-8A63-4574-9BF1-31121AEB8F31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TamoService", "TamoService\TamoService.csproj", "{84E34F5A-6FC8-4EEC-BC27-738D68B874D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{0F210845-8A63-4574-9BF1-31121AEB8F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F210845-8A63-4574-9BF1-31121AEB8F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F210845-8A63-4574-9BF1-31121AEB8F31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E34F5A-6FC8-4EEC-BC27-738D68B874D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E34F5A-6FC8-4EEC-BC27-738D68B874D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84E34F5A-6FC8-4EEC-BC27-738D68B874D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E34F5A-6FC8-4EEC-BC27-738D68B874D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

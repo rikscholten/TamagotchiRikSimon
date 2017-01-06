@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -24,6 +25,7 @@ namespace TamagotchiService
 
         public void FeedTamagotchi(int id)
         {
+         
             throw new NotImplementedException();
         }
 
@@ -36,14 +38,16 @@ namespace TamagotchiService
         {
             using (var context = new TamagotchiContext())
             {
+                context.Database.Connection.Open();
                 var tamagotchis = context.Tamagotchi.ToList();
                 return tamagotchis.Select(t => new Tamagotchi(t));
             }
+            //return tamagotchis;
         }
 
-        public void HugTamagotchi(int id)
+        public int HugTamagotchi(int id)
         {
-            throw new NotImplementedException();
+            return 100 + id;
         }
 
         public void PlayTamagotchi(int id)

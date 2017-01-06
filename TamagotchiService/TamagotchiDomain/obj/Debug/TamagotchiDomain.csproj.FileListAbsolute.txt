@@ -5,6 +5,6 @@ C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiD
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\bin\Debug\EntityFramework.xml
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\obj\Debug\TamagotchiDomain.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\obj\Debug\TamagotchiDomain.dll
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\obj\Debug\TamagotchiDomain.pdb
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDomain\obj\Debug\TamagotchiDomain.csprojResolveAssemblyReference.cache

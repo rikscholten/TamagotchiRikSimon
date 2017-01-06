@@ -13,29 +13,30 @@ namespace TamagotchiWeb.Controllers
 
         
         // GET: Tamagotchi
-        [HttpGet]
+        
         public ActionResult Index()
         {
-            TamagotchiService.IService1 client = new TamagotchiService.Service1Client();
+            ServiceReference1.IService1 client = new ServiceReference1.Service1Client();
+            //TamagotchiService.IService1 client = new TamagotchiService.Service1Client();
+            Debug.WriteLine(client.GetData(0));
+            //var list = client.GetTamagotchis();
 
-            var list = client.GetTamagotchis();
+            //ViewBag.List = list;
 
-            ViewBag.List = list;
-
-            int invoer = 0;
-            int uitkomst;
-            uitkomst = client.HugTamagotchi(invoer);
+            //int invoer = 0;
+            //int uitkomst;
+            //uitkomst = client.HugTamagotchi(invoer);
 
             Debug.WriteLine("xxxxxxxxxxxxxxxxxxxxxxxxxxx");
-            Debug.WriteLine(uitkomst);
-            //client.Naam = "Rik";
-            //client.Leeftijd = 0;
-            //client.Gezondheid = 0;
-            //client.Honger = 0;
-            //client.Slaap = 0;
-            //client.Verveling = 0;
-            //Debug.WriteLine(client.Naam);
-            Debug.WriteLine("xxxxxxxxxxxxxxxxxxxxxxxxxxx");
+            //Debug.WriteLine(uitkomst);
+            ////client.Naam = "Rik";
+            ////client.Leeftijd = 0;
+            ////client.Gezondheid = 0;
+            ////client.Honger = 0;
+            ////client.Slaap = 0;
+            ////client.Verveling = 0;
+            ////Debug.WriteLine(client.Naam);
+            //Debug.WriteLine("xxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
             //Debug.WriteLine(_service.GetTamagotchis());
             //List<TamagotchiService.Tamagotchi> tamagotchis = _service.GetTamagotchis()
