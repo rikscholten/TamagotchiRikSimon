@@ -29,7 +29,8 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TamoService" />
+      <xsd:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TamagotchiDomain" />
+      <xsd:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/TamoService" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IService1_GetData_InputMessage">
@@ -38,20 +39,30 @@
   <wsdl:message name="IService1_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  <wsdl:message name="IService1_AddTamagotchi_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTamagotchi" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  <wsdl:message name="IService1_AddTamagotchi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTamagotchiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTamagotchis_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTamagotchis" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTamagotchis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTamagotchisResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    <wsdl:operation name="AddTamagotchi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddTamagotchi" message="tns:IService1_AddTamagotchi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddTamagotchiResponse" message="tns:IService1_AddTamagotchi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTamagotchis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTamagotchis" message="tns:IService1_GetTamagotchis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTamagotchisResponse" message="tns:IService1_GetTamagotchis_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -65,8 +76,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+    <wsdl:operation name="AddTamagotchi">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddTamagotchi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTamagotchis">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTamagotchis" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -87,8 +107,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+    <wsdl:operation name="AddTamagotchi">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddTamagotchi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTamagotchis">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTamagotchis" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

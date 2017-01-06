@@ -4,6 +4,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TamagotchiDomain;
+
 
 namespace TamagotchiWeb.Controllers
 {
@@ -16,35 +18,31 @@ namespace TamagotchiWeb.Controllers
         
         public ActionResult Index()
         {
-            ServiceReference1.IService1 client = new ServiceReference1.Service1Client();
-            //TamagotchiService.IService1 client = new TamagotchiService.Service1Client();
-            Debug.WriteLine(client.GetData(0));
-            //var list = client.GetTamagotchis();
+            ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
+            
 
-            //ViewBag.List = list;
+            Tamagot tam = new Tamagot();
+            
+            tam.Naam = "Rik";
+            tam.Leeftijd = 0;
+            tam.Gezondheid = 0;
+            tam.Honger = 0;
+            tam.Slaap = 0;
+            tam.Verveling = 0;
 
-            //int invoer = 0;
-            //int uitkomst;
-            //uitkomst = client.HugTamagotchi(invoer);
+            //service.AddTamagotchi(tam);
+            List<ViewModels.Tamagotchi> tamagotchis = service.GetTamagotchis()
+                .Select(t => new ViewModels.Tamagotchi(t))
+                .ToList();
+            foreach( var t in tamagotchis)
+            {
+                Debug.WriteLine(t.Id+" -naam: " + t.Naam +" -age: " +t.Leeftijd +" -health " +t.Gezondheid);
+            }
 
-            Debug.WriteLine("xxxxxxxxxxxxxxxxxxxxxxxxxxx");
-            //Debug.WriteLine(uitkomst);
-            ////client.Naam = "Rik";
-            ////client.Leeftijd = 0;
-            ////client.Gezondheid = 0;
-            ////client.Honger = 0;
-            ////client.Slaap = 0;
-            ////client.Verveling = 0;
-            ////Debug.WriteLine(client.Naam);
-            //Debug.WriteLine("xxxxxxxxxxxxxxxxxxxxxxxxxxx");
-
-            //Debug.WriteLine(_service.GetTamagotchis());
-            //List<TamagotchiService.Tamagotchi> tamagotchis = _service.GetTamagotchis()
-            //    .Select(t => new TamagotchiService.Tamagotchi())
-            //    .ToList();
-
-            return View();
+                return View(tamagotchis);
         }
+
+       
 
         // GET: Tamagotchi/Details/5
         public ActionResult Details(int id)

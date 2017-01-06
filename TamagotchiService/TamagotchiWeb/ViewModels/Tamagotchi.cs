@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using TamagotchiWeb.TamagotchiService;
+using TamagotchiWeb.ServiceReference1;
 
 namespace TamagotchiWeb.ViewModels
 {
     public class Tamagotchi
     {
-        private TamagotchiService.Tamagotchi t;
+        private TamagotchiDomain.Tamagot t;
 
-        public Tamagotchi(TamagotchiService.Tamagotchi t)
+        public Tamagotchi(ServiceReference1.Tamagotchi t)
         {
+            Id = t.Id;
             Naam = t.Naam;
             Leeftijd = t.Leeftijd;
             Honger = t.Honger;
@@ -24,13 +25,11 @@ namespace TamagotchiWeb.ViewModels
         public Tamagotchi()
             {
             }
+        
+        [Required]
+        public int Id { get; set; }
 
         [Required]
-        public int Id { get; }
-
-        [Required]
-        [MinLength(0)]
-        [MaxLength(50)]
         public string Naam { get; set; }
 
         [Required]
@@ -38,19 +37,15 @@ namespace TamagotchiWeb.ViewModels
 
 
         [Required]
-        [Range(0, 100)]
         public int Honger { get; set; }
 
         [Required]
-        [Range(0, 100)]
         public int Slaap { get; set; }
 
         [Required]
-        [Range(0, 100)]
         public int Verveling { get; set; }
 
         [Required]
-        [Range(0, 100)]
         public int Gezondheid { get; set; }
     }
 }

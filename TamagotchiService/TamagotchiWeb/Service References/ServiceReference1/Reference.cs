@@ -15,18 +15,33 @@ namespace TamagotchiWeb.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/TamoService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Tamagotchi", Namespace="http://schemas.datacontract.org/2004/07/TamoService")]
     [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Tamagotchi : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
+        private int GezondheidField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
+        private int HongerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LeeftijdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NaamField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SlaapField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int VervelingField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -39,27 +54,92 @@ namespace TamagotchiWeb.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
+        public int Gezondheid {
             get {
-                return this.BoolValueField;
+                return this.GezondheidField;
             }
             set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
+                if ((this.GezondheidField.Equals(value) != true)) {
+                    this.GezondheidField = value;
+                    this.RaisePropertyChanged("Gezondheid");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
+        public int Honger {
             get {
-                return this.StringValueField;
+                return this.HongerField;
             }
             set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
+                if ((this.HongerField.Equals(value) != true)) {
+                    this.HongerField = value;
+                    this.RaisePropertyChanged("Honger");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Leeftijd {
+            get {
+                return this.LeeftijdField;
+            }
+            set {
+                if ((this.LeeftijdField.Equals(value) != true)) {
+                    this.LeeftijdField = value;
+                    this.RaisePropertyChanged("Leeftijd");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Naam {
+            get {
+                return this.NaamField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NaamField, value) != true)) {
+                    this.NaamField = value;
+                    this.RaisePropertyChanged("Naam");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Slaap {
+            get {
+                return this.SlaapField;
+            }
+            set {
+                if ((this.SlaapField.Equals(value) != true)) {
+                    this.SlaapField = value;
+                    this.RaisePropertyChanged("Slaap");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Verveling {
+            get {
+                return this.VervelingField;
+            }
+            set {
+                if ((this.VervelingField.Equals(value) != true)) {
+                    this.VervelingField = value;
+                    this.RaisePropertyChanged("Verveling");
                 }
             }
         }
@@ -84,11 +164,17 @@ namespace TamagotchiWeb.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        TamagotchiWeb.ServiceReference1.CompositeType GetDataUsingDataContract(TamagotchiWeb.ServiceReference1.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddTamagotchi", ReplyAction="http://tempuri.org/IService1/AddTamagotchiResponse")]
+        void AddTamagotchi(TamagotchiDomain.Tamagot t);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<TamagotchiWeb.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(TamagotchiWeb.ServiceReference1.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddTamagotchi", ReplyAction="http://tempuri.org/IService1/AddTamagotchiResponse")]
+        System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiDomain.Tamagot t);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTamagotchis", ReplyAction="http://tempuri.org/IService1/GetTamagotchisResponse")]
+        TamagotchiWeb.ServiceReference1.Tamagotchi[] GetTamagotchis();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTamagotchis", ReplyAction="http://tempuri.org/IService1/GetTamagotchisResponse")]
+        System.Threading.Tasks.Task<TamagotchiWeb.ServiceReference1.Tamagotchi[]> GetTamagotchisAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -126,12 +212,20 @@ namespace TamagotchiWeb.ServiceReference1 {
             return base.Channel.GetDataAsync(value);
         }
         
-        public TamagotchiWeb.ServiceReference1.CompositeType GetDataUsingDataContract(TamagotchiWeb.ServiceReference1.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContract(composite);
+        public void AddTamagotchi(TamagotchiDomain.Tamagot t) {
+            base.Channel.AddTamagotchi(t);
         }
         
-        public System.Threading.Tasks.Task<TamagotchiWeb.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(TamagotchiWeb.ServiceReference1.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContractAsync(composite);
+        public System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiDomain.Tamagot t) {
+            return base.Channel.AddTamagotchiAsync(t);
+        }
+        
+        public TamagotchiWeb.ServiceReference1.Tamagotchi[] GetTamagotchis() {
+            return base.Channel.GetTamagotchis();
+        }
+        
+        public System.Threading.Tasks.Task<TamagotchiWeb.ServiceReference1.Tamagotchi[]> GetTamagotchisAsync() {
+            return base.Channel.GetTamagotchisAsync();
         }
     }
 }
