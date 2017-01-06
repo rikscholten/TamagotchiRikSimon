@@ -1,0 +1,21 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Tamagot]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[Tamagot] (Default Constraint)
+       unnamed constraint on [dbo].[Tamagot] (Default Constraint)
+       unnamed constraint on [dbo].[Tamagot] (Default Constraint)
+       unnamed constraint on [dbo].[Tamagot] (Default Constraint)
+       unnamed constraint on [dbo].[Tamagot] (Default Constraint)
+     Table rebuild
+       [dbo].[Tamagot] (Table)
+
+** Supporting actions

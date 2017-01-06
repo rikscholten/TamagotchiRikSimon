@@ -22,12 +22,11 @@
     <MetadataSource Address="http://tamagotchineu.azurewebsites.net/service1.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="4bc28b1a-eff2-4a7d-895c-49d149c38142" SourceId="1" SourceUrl="http://tamagotchineu.azurewebsites.net/Service1.svc?disco" />
     <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="c92fbfbc-bb85-4e44-9b2d-0824a6d7a089" SourceId="1" SourceUrl="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="c9c5f463-d55b-4116-8038-ee1835486ae7" SourceId="1" SourceUrl="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd0" />
     <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="2c222da8-ca62-4d04-9b9b-53ada784aceb" SourceId="1" SourceUrl="http://tamagotchineu.azurewebsites.net/Service1.svc?wsdl" />
     <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="797fc9ff-cb74-4125-9001-4baa810d0203" SourceId="1" SourceUrl="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="d67678f7-dca7-420b-9007-8de62819bd9a" SourceId="1" SourceUrl="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd3" />
-    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="4bc28b1a-eff2-4a7d-895c-49d149c38142" SourceId="1" SourceUrl="http://tamagotchineu.azurewebsites.net/Service1.svc?disco" />
-    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="c9c5f463-d55b-4116-8038-ee1835486ae7" SourceId="1" SourceUrl="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

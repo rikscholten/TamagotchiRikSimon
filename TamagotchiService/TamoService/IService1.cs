@@ -20,7 +20,10 @@ namespace TamoService
         //CompositeType GetDataUsingDataContract(CompositeType composite);
 
         [OperationContract]
-        void AddTamagotchi(TamagotchiDomain.Tamagot t);
+        void AddTamagotchi(Tamagotchi t);
+
+        [OperationContract]
+        Tamagotchi GetTamagotchi(int Id);
 
         [OperationContract]
         IEnumerable<Tamagotchi> GetTamagotchis();

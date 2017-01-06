@@ -247,9 +247,6 @@
     <None Include="Service References\ServiceReference1\Service11.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\Service12.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\ServiceReference1\Service13.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -257,6 +254,10 @@
     <Content Include="Service References\ServiceReference1\TamagotchiWeb.ServiceReference1.Tamagotchi.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Views\Tamagotchi\Create.cshtml" />
+    <Content Include="Views\Tamagotchi\Edit.cshtml" />
+    <Content Include="Views\Tamagotchi\Details.cshtml" />
+    <Content Include="Views\Tamagotchi\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

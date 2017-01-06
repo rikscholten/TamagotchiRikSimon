@@ -14,12 +14,12 @@ namespace TamoService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public void AddTamagotchi(Tamagot t)
+        public void AddTamagotchi(Tamagotchi t)
         {
             using (var context = new TamoContext())
             {
                 
-                context.Tamagots.Add(t);
+                context.Tamagots.Add(t.toPoco());
                 context.SaveChanges();
             }
         }
@@ -33,12 +33,22 @@ namespace TamoService
             }
         }
 
+
         public string GetData(int value)
         {
             using (var context = new TamoContext())
             {
 
                 return context.Tamagots.ToList().First().Naam;
+            }
+        }
+
+        public Tamagotchi GetTamagotchi(int Id)
+        {
+            using (var context = new TamoContext())
+                {
+                var returnTamagot = context.Tamagots.ToList().Find(t => t.Id.Equals(Id));
+                return new Tamagotchi(returnTamagot);
             }
         }
 

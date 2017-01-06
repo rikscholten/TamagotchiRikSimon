@@ -47,7 +47,9 @@ namespace TamagotchiWeb.Controllers
         // GET: Tamagotchi/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
+
+            return View(new ViewModels.Tamagotchi(service.GetTamagotchi(id)));
         }
 
         // GET: Tamagotchi/Create
@@ -58,10 +60,17 @@ namespace TamagotchiWeb.Controllers
 
         // POST: Tamagotchi/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(ServiceReference1.Tamagotchi newtam)
         {
+
+            
             try
             {
+                ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
+
+
+
+                service.AddTamagotchi(newtam);
                 // TODO: Add insert logic here
 
                 return RedirectToAction("Index");
@@ -75,7 +84,8 @@ namespace TamagotchiWeb.Controllers
         // GET: Tamagotchi/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
+            return View(new ViewModels.Tamagotchi(service.GetTamagotchi(id)));
         }
 
         // POST: Tamagotchi/Edit/5
@@ -97,7 +107,9 @@ namespace TamagotchiWeb.Controllers
         // GET: Tamagotchi/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+
+            ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
+            return View(new ViewModels.Tamagotchi(service.GetTamagotchi(id)));
         }
 
         // POST: Tamagotchi/Delete/5

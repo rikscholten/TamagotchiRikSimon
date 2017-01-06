@@ -165,10 +165,16 @@ namespace TamagotchiWeb.ServiceReference1 {
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddTamagotchi", ReplyAction="http://tempuri.org/IService1/AddTamagotchiResponse")]
-        void AddTamagotchi(TamagotchiDomain.Tamagot t);
+        void AddTamagotchi(TamagotchiWeb.ServiceReference1.Tamagotchi t);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddTamagotchi", ReplyAction="http://tempuri.org/IService1/AddTamagotchiResponse")]
-        System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiDomain.Tamagot t);
+        System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiWeb.ServiceReference1.Tamagotchi t);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTamagotchi", ReplyAction="http://tempuri.org/IService1/GetTamagotchiResponse")]
+        TamagotchiWeb.ServiceReference1.Tamagotchi GetTamagotchi(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTamagotchi", ReplyAction="http://tempuri.org/IService1/GetTamagotchiResponse")]
+        System.Threading.Tasks.Task<TamagotchiWeb.ServiceReference1.Tamagotchi> GetTamagotchiAsync(int Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTamagotchis", ReplyAction="http://tempuri.org/IService1/GetTamagotchisResponse")]
         TamagotchiWeb.ServiceReference1.Tamagotchi[] GetTamagotchis();
@@ -212,12 +218,20 @@ namespace TamagotchiWeb.ServiceReference1 {
             return base.Channel.GetDataAsync(value);
         }
         
-        public void AddTamagotchi(TamagotchiDomain.Tamagot t) {
+        public void AddTamagotchi(TamagotchiWeb.ServiceReference1.Tamagotchi t) {
             base.Channel.AddTamagotchi(t);
         }
         
-        public System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiDomain.Tamagot t) {
+        public System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiWeb.ServiceReference1.Tamagotchi t) {
             return base.Channel.AddTamagotchiAsync(t);
+        }
+        
+        public TamagotchiWeb.ServiceReference1.Tamagotchi GetTamagotchi(int Id) {
+            return base.Channel.GetTamagotchi(Id);
+        }
+        
+        public System.Threading.Tasks.Task<TamagotchiWeb.ServiceReference1.Tamagotchi> GetTamagotchiAsync(int Id) {
+            return base.Channel.GetTamagotchiAsync(Id);
         }
         
         public TamagotchiWeb.ServiceReference1.Tamagotchi[] GetTamagotchis() {

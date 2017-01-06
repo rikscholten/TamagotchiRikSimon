@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Tamagot]
 (
-	[Id] INT NOT NULL PRIMARY KEY, 
+	[Id] INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
     [Naam] VARCHAR(50) NOT NULL, 
     [Leeftijd] INT NOT NULL DEFAULT 0, 
     [Honger] INT NOT NULL DEFAULT 0, 
