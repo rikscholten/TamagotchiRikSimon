@@ -26,7 +26,7 @@ namespace TamagotchiWeb.ViewModels
             {
             }
         
-        [Required]
+        
         public int Id { get; set; }
 
         [Required]

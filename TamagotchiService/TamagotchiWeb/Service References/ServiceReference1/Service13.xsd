@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TamoService" />
+  <xs:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TamagotchiDomain" />
+  <xs:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/TamoService" />
   <xs:element name="GetData">
     <xs:complexType>
       <xs:sequence>
@@ -18,7 +19,7 @@
   <xs:element name="AddTamagotchi">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TamoService" minOccurs="0" name="t" nillable="true" type="q1:Tamagotchi" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TamagotchiDomain" minOccurs="0" name="tam" nillable="true" type="q1:Tamagot" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

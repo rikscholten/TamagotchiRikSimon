@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using TamagotchiDomain;
 
 namespace TamoService
 {
@@ -20,7 +21,7 @@ namespace TamoService
         //CompositeType GetDataUsingDataContract(CompositeType composite);
 
         [OperationContract]
-        void AddTamagotchi(Tamagotchi t);
+        void AddTamagotchi(Tamagot tam);
 
         [OperationContract]
         Tamagotchi GetTamagotchi(int Id);

@@ -11,14 +11,17 @@ namespace TamagotchiWeb.Controllers
 {
     public class TamagotchiController : Controller
     {
-        
 
-        
+        private ServiceReference1.IService1 service;
+
+        public TamagotchiController()
+        {
+            service = new ServiceReference1.Service1Client("BasicHttpBinding_IService1");
+        }
         // GET: Tamagotchi
-        
+
         public ActionResult Index()
         {
-            ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
             
 
             Tamagot tam = new Tamagot();
@@ -47,7 +50,6 @@ namespace TamagotchiWeb.Controllers
         // GET: Tamagotchi/Details/5
         public ActionResult Details(int id)
         {
-            ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
 
             return View(new ViewModels.Tamagotchi(service.GetTamagotchi(id)));
         }
@@ -60,31 +62,35 @@ namespace TamagotchiWeb.Controllers
 
         // POST: Tamagotchi/Create
         [HttpPost]
-        public ActionResult Create(ServiceReference1.Tamagotchi newtam)
+        public ActionResult Create(ViewModels.Tamagotchi newtam)
         {
-
-            
-            try
-            {
-                ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
-
-
-
-                service.AddTamagotchi(newtam);
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
+            if (!ModelState.IsValid)
             {
                 return View();
             }
+
+
+                Tamagot tam = new Tamagot()
+                {
+                Id = newtam.Id,
+                Naam = newtam.Naam,
+                Leeftijd = newtam.Leeftijd,
+                Honger = newtam.Honger,
+                Slaap = newtam.Slaap,
+                Verveling = newtam.Verveling,
+                Gezondheid = newtam.Gezondheid
+            };
+            tam.Id = 1;
+            Debug.WriteLine(" -ID: " + tam.Id + " -naam: " + tam.Naam + " -age: " + tam.Leeftijd + " -honger: " + tam.Honger + " -slaap: " + tam.Slaap + " -verveling: " + tam.Verveling + " -gezondehid: " + tam.Gezondheid);
+            service.AddTamagotchi(tam);
+
+                return RedirectToAction("Index");
+            
         }
 
         // GET: Tamagotchi/Edit/5
         public ActionResult Edit(int id)
         {
-            ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
             return View(new ViewModels.Tamagotchi(service.GetTamagotchi(id)));
         }
 
@@ -107,8 +113,7 @@ namespace TamagotchiWeb.Controllers
         // GET: Tamagotchi/Delete/5
         public ActionResult Delete(int id)
         {
-
-            ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
+            
             return View(new ViewModels.Tamagotchi(service.GetTamagotchi(id)));
         }
 
