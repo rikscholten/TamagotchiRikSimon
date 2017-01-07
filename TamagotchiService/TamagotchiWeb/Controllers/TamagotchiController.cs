@@ -44,20 +44,38 @@ namespace TamagotchiWeb.Controllers
 
        
 
-       
+        // GET: Tamagotchi/Details/5
+        //public ActionResult Details(int id)
+        //{
+        //    if (!id.Equals(""))
+        //    {
+        //        ViewModels.Tamagotchi DetailVM = new ViewModels.Tamagotchi(service.GetTamagotchi(id));
+        //        DetailVM.Status = service.GetStatus(id);
+        //        return View(DetailVM);
+        //    }
+        //    return RedirectToAction("Index");
+        //}
 
-        [HttpGet]
-        public ActionResult Details(int id,string action = "")
+        //[HttpPost]
+        public ActionResult Details(int id,string actie="")
         {
-            if(action.Equals("")&& id!=0)
+
+            if (id!=0 && !actie.Equals(""))
+            {
+                service.PerformAction(id, actie);
+                ViewModels.Tamagotchi DetailVM = new ViewModels.Tamagotchi(service.GetTamagotchi(id));
+                DetailVM.Status = service.GetStatus(id);
+                return View(DetailVM);
+            }
+
+            if (!id.Equals("") && (actie.Equals("") || actie == null))
             {
                 ViewModels.Tamagotchi DetailVM = new ViewModels.Tamagotchi(service.GetTamagotchi(id));
                 DetailVM.Status = service.GetStatus(id);
                 return View(DetailVM);
             }
-            
 
-            service.PerformAction(id, action);
+            
 
 
 

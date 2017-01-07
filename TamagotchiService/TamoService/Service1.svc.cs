@@ -65,6 +65,14 @@ namespace TamoService
                 List<int> stats = new List<int>() { statusTama.Honger, statusTama.Slaap, statusTama.Verveling };
 
                 int maxStat = stats.Max();
+                if(maxStat==0 && statusTama.Gezondheid>99)
+                {
+                    return "Gezond";
+                }
+                if (maxStat == 0 && statusTama.Gezondheid <99)
+                {
+                    return "healing";
+                }
                 if (maxStat == statusTama.Honger) { Status = "Hongerig"; }
                 else if (maxStat == statusTama.Slaap) { Status = "Slaperig"; }
                 else if (maxStat == statusTama.Verveling) { Status = "Verveeld"; }
@@ -76,11 +84,11 @@ namespace TamoService
 
 
 
-        public void PerformAction(int Id, string Action)
+        public void PerformAction(int Id, string Actie)
         {
 
             Tamagotchi ActionTamagotchi = GetTamagotchi(Id);
-            switch (Action)
+            switch (Actie)
             {
                 
 
@@ -146,11 +154,13 @@ namespace TamoService
             }
             using (var context = new TamoContext())
             {
-                
 
 
-                var x = context.Tamagots.ToList().Find(t => t.Id == Id);
-                x= ActionTamagotchi.toPoco();
+
+                context.Tamagots.ToList().Find(t => t.Id == Id).Honger = ActionTamagotchi.Honger;
+                context.Tamagots.ToList().Find(t => t.Id == Id).Slaap = ActionTamagotchi.Slaap;
+                context.Tamagots.ToList().Find(t => t.Id == Id).Verveling = ActionTamagotchi.Verveling;
+                context.Tamagots.ToList().Find(t => t.Id == Id).Gezondheid = ActionTamagotchi.Gezondheid;
                 context.SaveChanges();
             }
 
