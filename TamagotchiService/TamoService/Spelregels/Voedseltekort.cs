@@ -12,8 +12,8 @@ namespace TamoService.Spelregels
         {
             if (tamagochi.Honger >= 80)
             {
-                Debug.WriteLine("honger test");
-                tamagochi.Gezondheid = tamagochi.Gezondheid - 20;
+                tamagochi.Gezondheid -= 20;
+                if (tamagochi.Gezondheid < 0) { tamagochi.Gezondheid = 0; }
             }
             return tamagochi;
 

@@ -15,7 +15,8 @@ namespace TamoService
     public interface IService1
     {
 
-        
+        [OperationContract]
+        void InitTimer();
 
         [OperationContract]
         void AddTamagotchi(Tamagot tam);

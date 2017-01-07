@@ -1,0 +1,83 @@
+﻿@model TamagotchiWeb.ViewModels.Tamagotchi
+
+<div>
+    <h4>Tamagotchi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Naam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Naam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Leeftijd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Leeftijd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Honger)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Honger)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Slaap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Slaap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Verveling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Verveling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gezondheid)
+        </dt>
+
+        <dd>
+            
+ 
+
+            <div class="progress" style="width:15%;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @Html.DisplayFor(model => model.Gezondheid)%;display:inline-block;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">@Html.DisplayFor(model => model.Gezondheid)</div>
+            </div>
+
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+   
+    @Html.ActionLink("Voeren", "Details", new { id = Model.Id ,actie = "Voeren" }) |
+    @Html.ActionLink("Slapen", "Details", new { id = Model.Id, actie = "Slapen" }) |
+    @Html.ActionLink("Spelen", "Details", new { id = Model.Id, actie = "Spelen" }) |
+    @Html.ActionLink("Knuffelen", "Details", new { id = Model.Id, actie = "Knuffelen" }) |
+    
+
+</p>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

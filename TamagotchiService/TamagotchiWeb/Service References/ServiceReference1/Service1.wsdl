@@ -34,6 +34,12 @@
       <xsd:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IService1_InitTimer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitTimer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InitTimer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitTimerResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_AddTamagotchi_InputMessage">
     <wsdl:part name="parameters" element="tns:AddTamagotchi" />
   </wsdl:message>
@@ -83,6 +89,10 @@
     <wsdl:part name="parameters" element="tns:CreateGameRulesResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
+    <wsdl:operation name="InitTimer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InitTimer" message="tns:IService1_InitTimer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InitTimerResponse" message="tns:IService1_InitTimer_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="AddTamagotchi">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddTamagotchi" message="tns:IService1_AddTamagotchi_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddTamagotchiResponse" message="tns:IService1_AddTamagotchi_OutputMessage" />
@@ -118,6 +128,15 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InitTimer">
+      <soap:operation soapAction="http://tempuri.org/IService1/InitTimer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="AddTamagotchi">
       <soap:operation soapAction="http://tempuri.org/IService1/AddTamagotchi" style="document" />
       <wsdl:input>
@@ -194,6 +213,15 @@
   <wsdl:binding name="BasicHttpsBinding_IService1" type="tns:IService1">
     <wsp:PolicyReference URI="#BasicHttpsBinding_IService1_policy" />
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InitTimer">
+      <soap:operation soapAction="http://tempuri.org/IService1/InitTimer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="AddTamagotchi">
       <soap:operation soapAction="http://tempuri.org/IService1/AddTamagotchi" style="document" />
       <wsdl:input>

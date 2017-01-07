@@ -3,6 +3,16 @@
   <xs:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TamagotchiDomain" />
   <xs:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/TamoService" />
   <xs:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="InitTimer">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitTimerResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="AddTamagotchi">
     <xs:complexType>
       <xs:sequence>

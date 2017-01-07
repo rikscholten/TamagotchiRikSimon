@@ -23,6 +23,9 @@ namespace TamagotchiWeb.ServiceReference1 {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool CrazyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int GezondheidField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -33,6 +36,9 @@ namespace TamagotchiWeb.ServiceReference1 {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime LeeftijdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool MunchiesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NaamField;
@@ -50,6 +56,19 @@ namespace TamagotchiWeb.ServiceReference1 {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Crazy {
+            get {
+                return this.CrazyField;
+            }
+            set {
+                if ((this.CrazyField.Equals(value) != true)) {
+                    this.CrazyField = value;
+                    this.RaisePropertyChanged("Crazy");
+                }
             }
         }
         
@@ -106,6 +125,19 @@ namespace TamagotchiWeb.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Munchies {
+            get {
+                return this.MunchiesField;
+            }
+            set {
+                if ((this.MunchiesField.Equals(value) != true)) {
+                    this.MunchiesField = value;
+                    this.RaisePropertyChanged("Munchies");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Naam {
             get {
                 return this.NaamField;
@@ -157,6 +189,12 @@ namespace TamagotchiWeb.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InitTimer", ReplyAction="http://tempuri.org/IService1/InitTimerResponse")]
+        void InitTimer();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InitTimer", ReplyAction="http://tempuri.org/IService1/InitTimerResponse")]
+        System.Threading.Tasks.Task InitTimerAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddTamagotchi", ReplyAction="http://tempuri.org/IService1/AddTamagotchiResponse")]
         void AddTamagotchi(TamagotchiDomain.Tamagot tam);
@@ -232,6 +270,14 @@ namespace TamagotchiWeb.ServiceReference1 {
         
         public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public void InitTimer() {
+            base.Channel.InitTimer();
+        }
+        
+        public System.Threading.Tasks.Task InitTimerAsync() {
+            return base.Channel.InitTimerAsync();
         }
         
         public void AddTamagotchi(TamagotchiDomain.Tamagot tam) {

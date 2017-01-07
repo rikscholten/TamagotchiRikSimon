@@ -16,6 +16,11 @@ namespace TamagotchiWeb
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            ServiceReference1.IService1 service;
+            service =  new ServiceReference1.Service1Client("BasicHttpBinding_IService1");
+            service.InitTimer();
+
         }
     }
 }

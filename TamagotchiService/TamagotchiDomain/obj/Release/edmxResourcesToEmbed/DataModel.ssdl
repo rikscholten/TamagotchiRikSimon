@@ -4,9 +4,9 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Naam" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Leeftijd" Type="int" Nullable="false" />
+    <Property Name="Leeftijd" Type="datetime" Nullable="false" />
     <Property Name="Honger" Type="int" Nullable="false" />
     <Property Name="Slaap" Type="int" Nullable="false" />
     <Property Name="Verveling" Type="int" Nullable="false" />

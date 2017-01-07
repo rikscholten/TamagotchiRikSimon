@@ -11,9 +11,8 @@ namespace TamoService.Spelregels
         {
             if (tamagochi.Slaap >= 80 )
             {
-                System.Diagnostics.Debug.WriteLine("slaap test     gezondheid pre:"+ tamagochi.Gezondheid);
                 tamagochi.Gezondheid -= 20;
-                System.Diagnostics.Debug.WriteLine(" gezondheid after:" + tamagochi.Gezondheid);
+                if (tamagochi.Gezondheid < 0) { tamagochi.Gezondheid = 0; }
             }
             return tamagochi;
 

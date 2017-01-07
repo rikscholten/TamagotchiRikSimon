@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
+using System.Timers;
 using TamagotchiDomain;
 using TamoService.Data;
 using TamoService.Spelregels;
@@ -21,28 +18,49 @@ namespace TamoService
 
         public Service1()
         {
+        }
 
+        public void InitTimer()
+        {
+            Timer timer1 = new Timer();
+            timer1.Elapsed += new ElapsedEventHandler(timer1_Tick);
+            timer1.Interval = 10000; // in miliseconds
+            timer1.Enabled = true;
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            UpdateTamagotchis();
         }
         public void UpdateTamagotchis()
         {
             using (var context = new TamoContext())
             {
-                foreach (Tamagot t in context.Tamagots)
+                foreach (Tamagot t in context.Tamagots.ToList().Where(t=>t.Gezondheid>0))
                 {
                     Tamagot newtam = UpdateTamagotchi(t);
                     updateDBTamagot(newtam);
                 }
-                context.SaveChanges();
                 ApplyConditions(); // past de spelregel condities toe
+                context.SaveChanges();
+
+
+                foreach (Tamagot t in context.Tamagots.ToList().Where(t => t.Gezondheid != 0))
+                {
+                    updateDBTamagot(t);
+                }
             }
+
 
         }
 
         public Tamagot UpdateTamagotchi(Tamagot t)
         {
-            t.Honger += new Random().Next(15, 35);
-            t.Slaap += new Random().Next(15, 35);
-            t.Verveling += new Random().Next(15, 35);
+            Random rnd = new Random();
+            t.Honger += rnd.Next(15, 35);
+            t.Slaap += rnd.Next(15, 35);
+            t.Verveling += rnd.Next(15, 35);
             return t;
         }
 
@@ -57,8 +75,14 @@ namespace TamoService
                 {
 
                     Tamagot newtam = rules.Execute(GetTamagotchi(t.Id)).toPoco();
+                    context.Tamagots.ToList().Find(tam => tam.Id == newtam.Id).Honger = newtam.Honger;
 
-                    updateDBTamagot(newtam);
+                    context.Tamagots.ToList().Find(tam => tam.Id == newtam.Id).Slaap = newtam.Slaap;
+
+                    context.Tamagots.ToList().Find(tam => tam.Id == newtam.Id).Verveling = newtam.Verveling;
+
+                    context.Tamagots.ToList().Find(tam => tam.Id == newtam.Id).Gezondheid = newtam.Gezondheid;
+                    
                 }
                 context.SaveChanges();
             }
@@ -194,8 +218,8 @@ namespace TamoService
 
                     ActionTamagotchi.Honger -= 50;
                     if (ActionTamagotchi.Honger < 0) { ActionTamagotchi.Honger = 0; }
-
-                    if (new Random().Next(1, 10) <= 1)
+                        Random rnd = new Random();
+                    if (rnd.Next(1, 10) <= 1)
                     {
 
                         ActionTamagotchi.Gezondheid -= 20;
@@ -219,8 +243,8 @@ namespace TamoService
 
                     ActionTamagotchi.Verveling -= 35;
                     if (ActionTamagotchi.Verveling < 0) { ActionTamagotchi.Verveling = 0; }
-
-                    if (new Random().Next(1, 10) <= 2)
+                        Random rng = new Random();
+                        if (rng.Next(1, 10) <= 2)
                     {
 
                         ActionTamagotchi.Gezondheid -= 10;
@@ -248,7 +272,8 @@ namespace TamoService
 
                     break;
             }
-            if (new Random().Next(100) <= 50 && ActionTamagotchi.Crazy)
+                Random rng2 = new Random();
+            if (rng2.Next(100) <= 50 && ActionTamagotchi.Crazy)
             {
                 ActionTamagotchi.Gezondheid = 0;//rip in peace
             }
@@ -256,8 +281,14 @@ namespace TamoService
             {
 
 
-                updateDBTamagot(ActionTamagotchi.toPoco());
-                context.SaveChanges();
+                    context.Tamagots.ToList().Find(tam => tam.Id == ActionTamagotchi.Id).Honger = ActionTamagotchi.Honger;
+
+                    context.Tamagots.ToList().Find(tam => tam.Id == ActionTamagotchi.Id).Slaap = ActionTamagotchi.Slaap;
+
+                    context.Tamagots.ToList().Find(tam => tam.Id == ActionTamagotchi.Id).Verveling = ActionTamagotchi.Verveling;
+
+                    context.Tamagots.ToList().Find(tam => tam.Id == ActionTamagotchi.Id).Gezondheid = ActionTamagotchi.Gezondheid;
+                    context.SaveChanges();
             }
 
                 //

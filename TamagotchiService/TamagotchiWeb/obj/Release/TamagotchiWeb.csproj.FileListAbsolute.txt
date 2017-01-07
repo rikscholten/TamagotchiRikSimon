@@ -68,3 +68,6 @@ C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiW
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWeb\bin\System.Web.WebPages.Razor.xml
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWeb\obj\Release\TamagotchiWeb.dll
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWeb\obj\Release\TamagotchiWeb.pdb
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWeb\bin\TamagotchiDomain.dll
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWeb\bin\TamagotchiDomain.pdb
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWeb\obj\Release\TamagotchiWeb.csprojResolveAssemblyReference.cache
