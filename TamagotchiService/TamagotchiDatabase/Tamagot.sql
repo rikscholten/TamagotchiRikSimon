@@ -6,5 +6,9 @@
     [Honger] INT NOT NULL DEFAULT 0, 
     [Slaap] INT NOT NULL DEFAULT 0, 
     [Verveling] INT NOT NULL DEFAULT 0, 
-    [Gezondheid] INT NOT NULL DEFAULT 100
+    [Gezondheid] INT NOT NULL DEFAULT 100,
+	CHECK ([Honger]>=0 AND [Honger]<=100),
+	CHECK ([Slaap]>=0 AND [Slaap]<=100),
+	CHECK ([Verveling]>=0 AND [Verveling]<=100),
+	CHECK ([Gezondheid]>=0 AND [Gezondheid]<=100)
 )

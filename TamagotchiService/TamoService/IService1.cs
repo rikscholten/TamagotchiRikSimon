@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using TamagotchiDomain;
+using TamoService.Spelregels;
 
 namespace TamoService
 {
@@ -34,7 +35,11 @@ namespace TamoService
         [OperationContract]
         void PerformAction(int Id, string Action);
 
-        
+        [OperationContract]
+        bool[] GetRuleArray();
+
+        [OperationContract]
+        SortedDictionary<int, ISpelregel> CreateGameRules(bool[] rulesArray);
     }
 
 
@@ -80,7 +85,14 @@ namespace TamoService
 
         [DataMember]
         public int Gezondheid { get; set; }
-        
+
+
+        [DataMember]
+        public bool Crazy { get; set; }
+
+        [DataMember]
+        public bool Munchies { get; set; }
+
 
         internal TamagotchiDomain.Tamagot toPoco()
         {

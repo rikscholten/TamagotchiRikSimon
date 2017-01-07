@@ -193,6 +193,18 @@ namespace TamagotchiWeb.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PerformAction", ReplyAction="http://tempuri.org/IService1/PerformActionResponse")]
         System.Threading.Tasks.Task PerformActionAsync(int Id, string Action);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRuleArray", ReplyAction="http://tempuri.org/IService1/GetRuleArrayResponse")]
+        bool[] GetRuleArray();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRuleArray", ReplyAction="http://tempuri.org/IService1/GetRuleArrayResponse")]
+        System.Threading.Tasks.Task<bool[]> GetRuleArrayAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateGameRules", ReplyAction="http://tempuri.org/IService1/CreateGameRulesResponse")]
+        System.Collections.Generic.Dictionary<int, object> CreateGameRules(bool[] rulesArray);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateGameRules", ReplyAction="http://tempuri.org/IService1/CreateGameRulesResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<int, object>> CreateGameRulesAsync(bool[] rulesArray);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -268,6 +280,22 @@ namespace TamagotchiWeb.ServiceReference1 {
         
         public System.Threading.Tasks.Task PerformActionAsync(int Id, string Action) {
             return base.Channel.PerformActionAsync(Id, Action);
+        }
+        
+        public bool[] GetRuleArray() {
+            return base.Channel.GetRuleArray();
+        }
+        
+        public System.Threading.Tasks.Task<bool[]> GetRuleArrayAsync() {
+            return base.Channel.GetRuleArrayAsync();
+        }
+        
+        public System.Collections.Generic.Dictionary<int, object> CreateGameRules(bool[] rulesArray) {
+            return base.Channel.CreateGameRules(rulesArray);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<int, object>> CreateGameRulesAsync(bool[] rulesArray) {
+            return base.Channel.CreateGameRulesAsync(rulesArray);
         }
     }
 }

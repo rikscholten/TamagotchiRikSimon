@@ -261,6 +261,9 @@
     <Content Include="Views\Tamagotchi\Details.cshtml" />
     <Content Include="Views\Tamagotchi\Delete.cshtml" />
     <Content Include="Views\Tamagotchi\Create.cshtml" />
+    <None Include="Service References\ServiceReference1\Service14.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

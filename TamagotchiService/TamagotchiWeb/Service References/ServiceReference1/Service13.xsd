@@ -2,6 +2,7 @@
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TamagotchiDomain" />
   <xs:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/TamoService" />
+  <xs:import schemaLocation="http://tamagotchineu.azurewebsites.net/Service1.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:element name="AddTamagotchi">
     <xs:complexType>
       <xs:sequence>
@@ -78,6 +79,32 @@
   <xs:element name="PerformActionResponse">
     <xs:complexType>
       <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleArray">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleArrayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetRuleArrayResult" nillable="true" type="q4:ArrayOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateGameRules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="rulesArray" nillable="true" type="q5:ArrayOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateGameRulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CreateGameRulesResult" nillable="true" type="q6:ArrayOfKeyValueOfintanyType" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>

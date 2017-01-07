@@ -110,6 +110,12 @@
     </Compile>
     <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Spelregels\Crazy.cs" />
+    <Compile Include="Spelregels\ExcuteSpelregels.cs" />
+    <Compile Include="Spelregels\ISpelregel.cs" />
+    <Compile Include="Spelregels\Munchies.cs" />
+    <Compile Include="Spelregels\Slaaptekort.cs" />
+    <Compile Include="Spelregels\Voedseltekort.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
