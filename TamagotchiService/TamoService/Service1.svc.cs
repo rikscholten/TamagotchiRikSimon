@@ -36,19 +36,11 @@ namespace TamoService
         }
 
 
-        public string GetData(int value)
-        {
-            using (var context = new TamoContext())
-            {
-
-                return context.Tamagots.ToList().First().Naam;
-            }
-        }
 
         public Tamagotchi GetTamagotchi(int Id)
         {
             using (var context = new TamoContext())
-                {
+            {
                 var returnTamagot = context.Tamagots.ToList().Find(t => t.Id.Equals(Id));
                 return new Tamagotchi(returnTamagot);
             }
@@ -58,24 +50,110 @@ namespace TamoService
         {
             using (var context = new TamoContext())
             {
-                context.Tamagots.ToList().Find(t => t.Id == Id).Naam=Name;
+                context.Tamagots.ToList().Find(t => t.Id == Id).Naam = Name;
                 context.SaveChanges();
 
             }
         }
 
+        public string GetStatus(int Id)
+        {
+            string Status = "";
+            using (var context = new TamoContext())
+            {
+                var statusTama = GetTamagotchi(Id);
+                List<int> stats = new List<int>() { statusTama.Honger, statusTama.Slaap, statusTama.Verveling };
 
-        //public CompositeType GetDataUsingDataContract(CompositeType composite)
-        //{
-        //    if (composite == null)
-        //    {
-        //        throw new ArgumentNullException("composite");
-        //    }
-        //    if (composite.BoolValue)
-        //    {
-        //        composite.StringValue += "Suffix";
-        //    }
-        //    return composite;
-        //}
+                int maxStat = stats.Max();
+                if (maxStat == statusTama.Honger) { Status = "Hongerig"; }
+                else if (maxStat == statusTama.Slaap) { Status = "Slaperig"; }
+                else if (maxStat == statusTama.Verveling) { Status = "Verveeld"; }
+
+
+            }
+            return Status;
+        }
+
+
+
+        public void PerformAction(int Id, string Action)
+        {
+
+            Tamagotchi ActionTamagotchi = GetTamagotchi(Id);
+            switch (Action)
+            {
+                
+
+                   
+                case "Voeren":
+                    #region   
+                    
+                        ActionTamagotchi.Honger -= 50;
+                    if (ActionTamagotchi.Honger < 0) { ActionTamagotchi.Honger = 0; }
+                    Random rnd = new Random();
+                    if (rnd.Next(1, 10) <= 1)
+                    {
+                       
+                        ActionTamagotchi.Gezondheid -= 20;
+                        if (ActionTamagotchi.Gezondheid < 0) { ActionTamagotchi.Gezondheid = 0; } //rip
+                    }
+                    break;
+                #endregion
+                case "Slapen":
+                    #region  
+                    ActionTamagotchi.Slaap -= 25;
+                    if (ActionTamagotchi.Slaap < 0) { ActionTamagotchi.Slaap = 0; }
+
+
+                    ActionTamagotchi.Gezondheid += 10;
+                    if (ActionTamagotchi.Gezondheid > 100) { ActionTamagotchi.Gezondheid = 100; }
+
+                    break;
+                #endregion
+                case "Spelen":
+                    #region 
+
+                    ActionTamagotchi.Verveling -= 35;
+                    if (ActionTamagotchi.Verveling < 0) { ActionTamagotchi.Verveling = 0; }
+                    rnd = new Random();
+                    if (rnd.Next(1, 10) <= 2)
+                    {
+                       
+                        ActionTamagotchi.Gezondheid -= 10;
+                        if (ActionTamagotchi.Gezondheid < 0) { ActionTamagotchi.Gezondheid = 0; } //rip
+                    }
+                    break;
+                #endregion
+                case "Knuffelen":
+                    #region 
+
+                    ActionTamagotchi.Honger -= 10;
+                    if (ActionTamagotchi.Honger < 0) { ActionTamagotchi.Honger = 0; }
+
+                    ActionTamagotchi.Slaap -= 10;
+                    if (ActionTamagotchi.Slaap < 0) { ActionTamagotchi.Slaap = 0; }
+
+                    ActionTamagotchi.Verveling -= 10;
+                    if (ActionTamagotchi.Verveling < 0) { ActionTamagotchi.Verveling = 0; }
+
+                    ActionTamagotchi.Gezondheid += 10;
+                    if (ActionTamagotchi.Gezondheid > 100) { ActionTamagotchi.Gezondheid = 100; }
+                    break;
+                #endregion
+                default:
+
+                    break;
+            }
+            using (var context = new TamoContext())
+            {
+                
+
+
+                var x = context.Tamagots.ToList().Find(t => t.Id == Id);
+                x= ActionTamagotchi.toPoco();
+                context.SaveChanges();
+            }
+
+        }
     }
 }

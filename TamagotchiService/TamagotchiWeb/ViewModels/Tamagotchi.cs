@@ -33,7 +33,7 @@ namespace TamagotchiWeb.ViewModels
         public string Naam { get; set; }
 
         [Required]
-        public int Leeftijd { get; set; }
+        public DateTime Leeftijd { get; set; }
 
 
         [Required]
@@ -47,5 +47,7 @@ namespace TamagotchiWeb.ViewModels
 
         [Required]
         public int Gezondheid { get; set; }
+        
+        public string Status { get; set; }
     }
 }

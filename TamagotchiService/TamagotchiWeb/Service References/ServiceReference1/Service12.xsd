@@ -5,7 +5,7 @@
       <xs:element minOccurs="0" name="Gezondheid" type="xs:int" />
       <xs:element minOccurs="0" name="Honger" type="xs:int" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Leeftijd" type="xs:int" />
+      <xs:element minOccurs="0" name="Leeftijd" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Naam" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Slaap" type="xs:int" />
       <xs:element minOccurs="0" name="Verveling" type="xs:int" />

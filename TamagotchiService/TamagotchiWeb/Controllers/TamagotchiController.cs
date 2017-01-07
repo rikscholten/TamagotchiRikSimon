@@ -26,18 +26,15 @@ namespace TamagotchiWeb.Controllers
 
             Tamagot tam = new Tamagot();
             
-            tam.Naam = "Rik";
-            tam.Leeftijd = 0;
-            tam.Gezondheid = 0;
-            tam.Honger = 0;
-            tam.Slaap = 0;
-            tam.Verveling = 0;
+            
 
             //service.AddTamagotchi(tam);
             List<ViewModels.Tamagotchi> tamagotchis = service.GetTamagotchis()
                 .Select(t => new ViewModels.Tamagotchi(t))
                 .ToList();
-            foreach( var t in tamagotchis)
+
+            tamagotchis.ForEach(t => t.Status = service.GetStatus(t.Id));
+            foreach ( var t in tamagotchis)
             {
                 Debug.WriteLine(t.Id+" -naam: " + t.Naam +" -age: " +t.Leeftijd +" -health " +t.Gezondheid);
             }
@@ -47,11 +44,25 @@ namespace TamagotchiWeb.Controllers
 
        
 
-        // GET: Tamagotchi/Details/5
-        public ActionResult Details(int id)
-        {
+       
 
-            return View(new ViewModels.Tamagotchi(service.GetTamagotchi(id)));
+        [HttpGet]
+        public ActionResult Details(int id,string action = "")
+        {
+            if(action.Equals("")&& id!=0)
+            {
+                ViewModels.Tamagotchi DetailVM = new ViewModels.Tamagotchi(service.GetTamagotchi(id));
+                DetailVM.Status = service.GetStatus(id);
+                return View(DetailVM);
+            }
+            
+
+            service.PerformAction(id, action);
+
+
+
+            return View();
+
         }
 
         // GET: Tamagotchi/Create
@@ -74,13 +85,12 @@ namespace TamagotchiWeb.Controllers
                 {
                 Id = newtam.Id,
                 Naam = newtam.Naam,
-                Leeftijd = newtam.Leeftijd,
-                Honger = newtam.Honger,
-                Slaap = newtam.Slaap,
-                Verveling = newtam.Verveling,
-                Gezondheid = newtam.Gezondheid
+                Leeftijd = DateTime.Now,
+                Honger = 0,
+                Slaap = 0,
+                Verveling = 0,
+                Gezondheid = 100
             };
-            tam.Id = 1;
             Debug.WriteLine(" -ID: " + tam.Id + " -naam: " + tam.Naam + " -age: " + tam.Leeftijd + " -honger: " + tam.Honger + " -slaap: " + tam.Slaap + " -verveling: " + tam.Verveling + " -gezondehid: " + tam.Gezondheid);
             service.AddTamagotchi(tam);
 
@@ -131,5 +141,37 @@ namespace TamagotchiWeb.Controllers
                 return View();
             }
         }
+
+        //[HttpPost]
+        //public ActionResult Voeren(int id)
+        //{
+        //    //service.Voeren();
+
+        //    return View();
+        //}
+
+        //[HttpPost]
+        //public ActionResult Slapen(int id)
+        //{
+        //    //service.Slapen();
+
+        //    return View();
+        //}
+
+        //[HttpPost]
+        //public ActionResult Spelen(int id)
+        //{
+        //    //service.Spelen();
+
+        //    return View();
+        //}
+
+        //[HttpPost]
+        //public ActionResult Knuffelen(int id)
+        //{
+        //    //service.Knuffelen();
+
+        //    return View();
+        //}
     }
 }

@@ -11,7 +11,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Naam" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Leeftijd" Type="int" Nullable="false" />
+          <Property Name="Leeftijd" Type="datetime" Nullable="false" />
           <Property Name="Honger" Type="int" Nullable="false" />
           <Property Name="Slaap" Type="int" Nullable="false" />
           <Property Name="Verveling" Type="int" Nullable="false" />
@@ -30,7 +30,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Naam" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Leeftijd" Type="Int32" Nullable="false" />
+          <Property Name="Leeftijd" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Honger" Type="Int32" Nullable="false" />
           <Property Name="Slaap" Type="Int32" Nullable="false" />
           <Property Name="Verveling" Type="Int32" Nullable="false" />

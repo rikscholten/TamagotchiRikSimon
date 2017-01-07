@@ -16,7 +16,7 @@ namespace TamagotchiDomain
     {
         public int Id { get; set; }
         public string Naam { get; set; }
-        public int Leeftijd { get; set; }
+        public System.DateTime Leeftijd { get; set; }
         public int Honger { get; set; }
         public int Slaap { get; set; }
         public int Verveling { get; set; }

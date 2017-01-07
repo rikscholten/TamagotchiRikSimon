@@ -1,0 +1,23 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The type for column Leeftijd in table [dbo].[Tamagot] is currently  INT NOT NULL but is being changed to  DATETIME NOT
+         NULL. Data loss could occur.
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[Tamagot] (Default Constraint)
+     Alter
+       [dbo].[Tamagot] (Table)
+     Create
+       Default Constraint: unnamed constraint on [dbo].[Tamagot] (Default Constraint)
+
+** Supporting actions
+
+The type for column Leeftijd in table [dbo].[Tamagot] is currently  INT NOT NULL but is being changed to  DATETIME NOT NULL. Data loss could occur.
+

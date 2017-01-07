@@ -14,11 +14,7 @@ namespace TamoService
     public interface IService1
     {
 
-        [OperationContract]
-        string GetData(int value);
-
-        //[OperationContract]
-        //CompositeType GetDataUsingDataContract(CompositeType composite);
+        
 
         [OperationContract]
         void AddTamagotchi(Tamagot tam);
@@ -32,31 +28,17 @@ namespace TamoService
         [OperationContract]
         IEnumerable<Tamagotchi> GetTamagotchis();
 
-        // TODO: Add your service operations here
+        [OperationContract]
+        String GetStatus(int Id);
+
+        [OperationContract]
+        void PerformAction(int Id, string Action);
+
+        
     }
 
 
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    //[DataContract]
-    //public class CompositeType
-    //{
-    //    bool boolValue = true;
-    //    string stringValue = "Hello ";
-
-    //    [DataMember]
-    //    public bool BoolValue
-    //    {
-    //        get { return boolValue; }
-    //        set { boolValue = value; }
-    //    }
-
-    //    [DataMember]
-    //    public string StringValue
-    //    {
-    //        get { return stringValue; }
-    //        set { stringValue = value; }
-    //    }
-    //}
+ 
 
     [DataContract]
     public class Tamagotchi
@@ -85,8 +67,7 @@ namespace TamoService
         public string Naam { get; set; }
 
         [DataMember]
-        public int Leeftijd { get; set; }
-
+        public DateTime Leeftijd { get; set; }
 
         [DataMember]
         public int Honger { get; set; }
@@ -99,6 +80,7 @@ namespace TamoService
 
         [DataMember]
         public int Gezondheid { get; set; }
+        
 
         internal TamagotchiDomain.Tamagot toPoco()
         {

@@ -32,7 +32,7 @@ namespace TamagotchiWeb.ServiceReference1 {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int LeeftijdField;
+        private System.DateTime LeeftijdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NaamField;
@@ -93,7 +93,7 @@ namespace TamagotchiWeb.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Leeftijd {
+        public System.DateTime Leeftijd {
             get {
                 return this.LeeftijdField;
             }
@@ -158,12 +158,6 @@ namespace TamagotchiWeb.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        string GetData(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddTamagotchi", ReplyAction="http://tempuri.org/IService1/AddTamagotchiResponse")]
         void AddTamagotchi(TamagotchiDomain.Tamagot tam);
         
@@ -187,6 +181,18 @@ namespace TamagotchiWeb.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTamagotchis", ReplyAction="http://tempuri.org/IService1/GetTamagotchisResponse")]
         System.Threading.Tasks.Task<TamagotchiWeb.ServiceReference1.Tamagotchi[]> GetTamagotchisAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetStatus", ReplyAction="http://tempuri.org/IService1/GetStatusResponse")]
+        string GetStatus(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetStatus", ReplyAction="http://tempuri.org/IService1/GetStatusResponse")]
+        System.Threading.Tasks.Task<string> GetStatusAsync(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PerformAction", ReplyAction="http://tempuri.org/IService1/PerformActionResponse")]
+        void PerformAction(int Id, string Action);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PerformAction", ReplyAction="http://tempuri.org/IService1/PerformActionResponse")]
+        System.Threading.Tasks.Task PerformActionAsync(int Id, string Action);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -214,14 +220,6 @@ namespace TamagotchiWeb.ServiceReference1 {
         
         public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
-        }
-        
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
         }
         
         public void AddTamagotchi(TamagotchiDomain.Tamagot tam) {
@@ -254,6 +252,22 @@ namespace TamagotchiWeb.ServiceReference1 {
         
         public System.Threading.Tasks.Task<TamagotchiWeb.ServiceReference1.Tamagotchi[]> GetTamagotchisAsync() {
             return base.Channel.GetTamagotchisAsync();
+        }
+        
+        public string GetStatus(int Id) {
+            return base.Channel.GetStatus(Id);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetStatusAsync(int Id) {
+            return base.Channel.GetStatusAsync(Id);
+        }
+        
+        public void PerformAction(int Id, string Action) {
+            base.Channel.PerformAction(Id, Action);
+        }
+        
+        public System.Threading.Tasks.Task PerformActionAsync(int Id, string Action) {
+            return base.Channel.PerformActionAsync(Id, Action);
         }
     }
 }

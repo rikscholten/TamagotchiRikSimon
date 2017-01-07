@@ -3,7 +3,3 @@ C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiD
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDatabase\bin\Debug\TamagotchiDatabase.pdb
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDatabase\obj\Debug\TamagotchiDatabase.dll
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDatabase\obj\Debug\TamagotchiDatabase.pdb
-C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDatabase\obj\Debug\Model.xml
-C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDatabase\obj\Debug\refactor.xml
-C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDatabase\obj\Debug\postdeploy.sql
-C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiDatabase\obj\Debug\predeploy.sql
