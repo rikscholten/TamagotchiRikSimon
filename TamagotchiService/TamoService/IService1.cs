@@ -94,6 +94,9 @@ namespace TamoService
         [DataMember]
         public bool Munchies { get; set; }
 
+        [DataMember]
+        public string Status { get ; set; }
+
 
         internal TamagotchiDomain.Tamagot toPoco()
         {

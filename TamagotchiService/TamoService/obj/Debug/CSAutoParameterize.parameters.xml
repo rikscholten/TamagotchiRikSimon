@@ -6,4 +6,7 @@
   <parameter name="TamagotchiDomain.TamagotchiSimonRikEntities-Web.config Connection String" description="TamagotchiDomain.TamagotchiSimonRikEntities Connection String used in web.config by the application to access the database." defaultValue="TamagotchiDomain.TamagotchiSimonRikEntities_ConnectionString" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\Admin\\Documents\\GitHub\\TamagotchiRikSimon\\TamagotchiService\\TamoService\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TamagotchiDomain.TamagotchiSimonRikEntities']/@connectionString" />
   </parameter>
+  <parameter name="TamoService.Data.TamoContext-Web.config Connection String" description="TamoService.Data.TamoContext Connection String used in web.config by the application to access the database." defaultValue="TamoService.Data.TamoContext_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Admin\\Documents\\GitHub\\TamagotchiRikSimon\\TamagotchiService\\TamoService\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TamoService.Data.TamoContext']/@connectionString" />
+  </parameter>
 </parameters>

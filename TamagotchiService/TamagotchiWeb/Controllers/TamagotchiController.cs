@@ -23,7 +23,7 @@ namespace TamagotchiWeb.Controllers
         public ActionResult Index()
         {
 
-
+            
             Tamagot tam = new Tamagot();
 
 

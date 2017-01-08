@@ -146,6 +146,7 @@ namespace TamoService
             using (var context = new TamoContext())
             {
                 var tamagotchis = context.Tamagots.ToList();
+                
                 return tamagotchis.Select(t => new Tamagotchi(t));
             }
         }
@@ -193,8 +194,8 @@ namespace TamoService
                 else if (maxStat == statusTama.Verveling) { Status = "Verveeld"; }
                 if (statusTama.Gezondheid==0) { Status = "DOOD"; }
 
-
             }
+            
             return Status;
         }
 

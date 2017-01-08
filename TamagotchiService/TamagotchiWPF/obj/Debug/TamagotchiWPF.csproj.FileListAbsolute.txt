@@ -1,0 +1,13 @@
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\bin\Debug\TamagotchiWPF.exe.config
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\bin\Debug\TamagotchiWPF.exe
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\bin\Debug\TamagotchiWPF.pdb
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\App.g.cs
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\TamagotchiWPF_MarkupCompile.cache
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\TamagotchiWPF_MarkupCompile.lref
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\MainWindow.baml
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\TamagotchiWPF.g.resources
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\TamagotchiWPF.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\TamagotchiWPF.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\TamagotchiWPF.exe
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\TamagotchiWPF.pdb

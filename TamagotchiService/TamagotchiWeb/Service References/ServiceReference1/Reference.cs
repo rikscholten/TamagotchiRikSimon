@@ -47,6 +47,9 @@ namespace TamagotchiWeb.ServiceReference1 {
         private int SlaapField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int VervelingField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -159,6 +162,19 @@ namespace TamagotchiWeb.ServiceReference1 {
                 if ((this.SlaapField.Equals(value) != true)) {
                     this.SlaapField = value;
                     this.RaisePropertyChanged("Slaap");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
                 }
             }
         }
