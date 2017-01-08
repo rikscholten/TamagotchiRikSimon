@@ -1,0 +1,14 @@
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\bin\Debug\ApplicationInsights.config
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\bin\Debug\UnitTests.dll.config
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\bin\Debug\UnitTests.dll
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\bin\Debug\UnitTests.pdb
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\bin\Debug\TamoService.dll
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\bin\Debug\TamagotchiDomain.dll
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\bin\Debug\TamoService.pdb
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\bin\Debug\TamagotchiDomain.pdb
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\obj\Debug\UnitTests.dll
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\UnitTests\obj\Debug\UnitTests.pdb
