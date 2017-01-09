@@ -192,12 +192,6 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Resource Include="Images\DOOD.jpg" />
-    <Resource Include="Images\Gezond.jpg" />
-    <Resource Include="Images\Healing.jpg" />
-    <Resource Include="Images\Hongerig.jpg" />
-    <Resource Include="Images\Slaperig.jpg" />
-    <Resource Include="Images\Verveeld.jpg" />
     <Content Include="Properties\DataSources\TamagotchiDomain.Tamagot.datasource" />
     <None Include="Properties\PublishProfiles\TamagotchiPros - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\TamagotchiPros - Web Deploy.pubxml" />
