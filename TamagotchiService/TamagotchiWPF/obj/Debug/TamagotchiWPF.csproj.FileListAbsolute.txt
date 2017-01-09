@@ -11,3 +11,8 @@ C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiW
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\TamagotchiWPF.csproj.GenerateResource.Cache
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\TamagotchiWPF.exe
 C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\TamagotchiWPF.pdb
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\obj\Debug\TamagotchiWPF.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\bin\Debug\TamagotchiDomain.dll
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\bin\Debug\TamagotchiDomain.pdb
+C:\Users\Admin\Documents\GitHub\TamagotchiRikSimon\TamagotchiService\TamagotchiWPF\bin\Debug\EntityFramework.xml

@@ -14,9 +14,14 @@ namespace TamoService
     [ServiceContract]
     public interface IService1
     {
+        [OperationContract]
+        int GetAge(int Id);
+
 
         [OperationContract]
         void InitTimer();
+        [OperationContract]
+        void ApplyConditions();
 
         [OperationContract]
         void AddTamagotchi(Tamagot tam);
@@ -58,7 +63,9 @@ namespace TamoService
         {
             Id = t.Id;
             Naam = t.Naam;
-            Leeftijd = t.Leeftijd;
+            GeboorteTijd = t.GeboorteTijd;
+            SterfTijd = t.SterfTijd;
+            LastAction = t.LastAction;
             Honger = t.Honger;
             Slaap = t.Slaap;
             Verveling = t.Verveling;
@@ -73,7 +80,13 @@ namespace TamoService
         public string Naam { get; set; }
 
         [DataMember]
-        public DateTime Leeftijd { get; set; }
+        public DateTime GeboorteTijd { get; set; }
+
+        [DataMember]
+        public DateTime? SterfTijd { get; set; }
+
+        [DataMember]
+        public DateTime? LastAction { get; set; }
 
         [DataMember]
         public int Honger { get; set; }
@@ -104,7 +117,9 @@ namespace TamoService
             {
                 Id = this.Id,
                 Naam = this.Naam,
-                Leeftijd = this.Leeftijd,
+                GeboorteTijd = this.GeboorteTijd,
+                SterfTijd = this.SterfTijd,
+                LastAction = this.LastAction,
                 Honger = this.Honger,
                 Slaap = this.Slaap,
                 Verveling = this.Verveling,

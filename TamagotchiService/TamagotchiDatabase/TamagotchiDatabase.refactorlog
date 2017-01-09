@@ -40,7 +40,7 @@
     <Property Name="ElementType" Value="SqlSimpleColumn" />
     <Property Name="ParentElementName" Value="[dbo].[Tamagot]" />
     <Property Name="ParentElementType" Value="SqlTable" />
-    <Property Name="NewName" Value="Leeftijd" />
+    <Property Name="NewName" Value="GeboorteTijd" />
   </Operation>
   <Operation Name="Rename Refactor" Key="5a7ce37e-b67e-4db2-9c74-7c2f64d6aa6b" ChangeDateTime="01/05/2017 16:07:20">
     <Property Name="ElementName" Value="[dbo].[Tamagot].[Gezondheid]" />
@@ -50,7 +50,7 @@
     <Property Name="NewName" Value="Honger" />
   </Operation>
   <Operation Name="Rename Refactor" Key="1a9f58bf-141e-4ef4-b29d-fb6d829d7c02" ChangeDateTime="01/05/2017 16:07:55">
-    <Property Name="ElementName" Value="[dbo].[Tamagot].[Leeftijd]" />
+    <Property Name="ElementName" Value="[dbo].[Tamagot].[GeboorteTijd]" />
     <Property Name="ElementType" Value="SqlSimpleColumn" />
     <Property Name="ParentElementName" Value="[dbo].[Tamagot]" />
     <Property Name="ParentElementType" Value="SqlTable" />

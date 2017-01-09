@@ -3,14 +3,16 @@
   <xs:complexType name="Tamagotchi">
     <xs:sequence>
       <xs:element minOccurs="0" name="Crazy" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GeboorteTijd" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Gezondheid" type="xs:int" />
       <xs:element minOccurs="0" name="Honger" type="xs:int" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Leeftijd" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastAction" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Munchies" type="xs:boolean" />
       <xs:element minOccurs="0" name="Naam" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Slaap" type="xs:int" />
       <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SterfTijd" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Verveling" type="xs:int" />
     </xs:sequence>
   </xs:complexType>

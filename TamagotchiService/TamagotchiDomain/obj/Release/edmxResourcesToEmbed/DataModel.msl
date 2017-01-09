@@ -4,9 +4,11 @@
     <EntitySetMapping Name="Tamagot">
       <EntityTypeMapping TypeName="TamagotchiSimonRikModel.Tamagot">
         <MappingFragment StoreEntitySet="Tamagot">
+          <ScalarProperty Name="LastAction" ColumnName="LastAction" />
+          <ScalarProperty Name="SterfTijd" ColumnName="SterfTijd" />
+          <ScalarProperty Name="GeboorteTijd" ColumnName="GeboorteTijd" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Naam" ColumnName="Naam" />
-          <ScalarProperty Name="Leeftijd" ColumnName="Leeftijd" />
           <ScalarProperty Name="Honger" ColumnName="Honger" />
           <ScalarProperty Name="Slaap" ColumnName="Slaap" />
           <ScalarProperty Name="Verveling" ColumnName="Verveling" />

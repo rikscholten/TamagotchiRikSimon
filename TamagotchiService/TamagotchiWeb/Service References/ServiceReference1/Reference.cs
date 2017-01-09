@@ -26,6 +26,9 @@ namespace TamagotchiWeb.ServiceReference1 {
         private bool CrazyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime GeboorteTijdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int GezondheidField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -35,7 +38,7 @@ namespace TamagotchiWeb.ServiceReference1 {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime LeeftijdField;
+        private System.Nullable<System.DateTime> LastActionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool MunchiesField;
@@ -48,6 +51,9 @@ namespace TamagotchiWeb.ServiceReference1 {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> SterfTijdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int VervelingField;
@@ -71,6 +77,19 @@ namespace TamagotchiWeb.ServiceReference1 {
                 if ((this.CrazyField.Equals(value) != true)) {
                     this.CrazyField = value;
                     this.RaisePropertyChanged("Crazy");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime GeboorteTijd {
+            get {
+                return this.GeboorteTijdField;
+            }
+            set {
+                if ((this.GeboorteTijdField.Equals(value) != true)) {
+                    this.GeboorteTijdField = value;
+                    this.RaisePropertyChanged("GeboorteTijd");
                 }
             }
         }
@@ -115,14 +134,14 @@ namespace TamagotchiWeb.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime Leeftijd {
+        public System.Nullable<System.DateTime> LastAction {
             get {
-                return this.LeeftijdField;
+                return this.LastActionField;
             }
             set {
-                if ((this.LeeftijdField.Equals(value) != true)) {
-                    this.LeeftijdField = value;
-                    this.RaisePropertyChanged("Leeftijd");
+                if ((this.LastActionField.Equals(value) != true)) {
+                    this.LastActionField = value;
+                    this.RaisePropertyChanged("LastAction");
                 }
             }
         }
@@ -180,6 +199,19 @@ namespace TamagotchiWeb.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> SterfTijd {
+            get {
+                return this.SterfTijdField;
+            }
+            set {
+                if ((this.SterfTijdField.Equals(value) != true)) {
+                    this.SterfTijdField = value;
+                    this.RaisePropertyChanged("SterfTijd");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int Verveling {
             get {
                 return this.VervelingField;
@@ -205,6 +237,12 @@ namespace TamagotchiWeb.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAge", ReplyAction="http://tempuri.org/IService1/GetAgeResponse")]
+        int GetAge(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAge", ReplyAction="http://tempuri.org/IService1/GetAgeResponse")]
+        System.Threading.Tasks.Task<int> GetAgeAsync(int Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InitTimer", ReplyAction="http://tempuri.org/IService1/InitTimerResponse")]
         void InitTimer();
@@ -286,6 +324,14 @@ namespace TamagotchiWeb.ServiceReference1 {
         
         public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public int GetAge(int Id) {
+            return base.Channel.GetAge(Id);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetAgeAsync(int Id) {
+            return base.Channel.GetAgeAsync(Id);
         }
         
         public void InitTimer() {

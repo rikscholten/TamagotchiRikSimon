@@ -11,7 +11,8 @@ namespace TamoService.Spelregels
         {
             if (tamagochi.Slaap >= 80 )
             {
-                tamagochi.Gezondheid -= 20;
+                //TODO COMMENT WEGHALEN
+                //tamagochi.Gezondheid -= 20;
                 if (tamagochi.Gezondheid < 0) { tamagochi.Gezondheid = 0; }
             }
             return tamagochi;

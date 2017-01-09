@@ -33,11 +33,10 @@ namespace TamagotchiWeb.Controllers
                 .Select(t => new ViewModels.Tamagotchi(t))
                 .ToList();
 
-            tamagotchis.ForEach(t => t.Status = service.GetStatus(t.Id));
-            foreach (var t in tamagotchis)
-            {
-                Debug.WriteLine(t.Id + " -naam: " + t.Naam + " -age: " + t.Leeftijd + " -health " + t.Gezondheid);
-            }
+            tamagotchis.ForEach(t => {
+                t.Status = service.GetStatus(t.Id);
+                t.Leeftijd = service.GetAge(t.Id);
+            });
 
             return View(tamagotchis);
         }
@@ -107,7 +106,9 @@ namespace TamagotchiWeb.Controllers
                     {
                         Id = 0,
                         Naam = s,
-                        Leeftijd = nowtime,
+                        GeboorteTijd = nowtime,
+                        SterfTijd = null,
+                        LastAction = System.DateTime.Parse("2017-01-01"),
                         Honger = 0,
                         Slaap = 0,
                         Verveling = 0,

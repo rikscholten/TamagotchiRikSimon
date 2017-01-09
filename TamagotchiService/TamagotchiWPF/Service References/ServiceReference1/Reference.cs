@@ -15,147 +15,6 @@ namespace TamagotchiWPF.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Tamagot", Namespace="http://schemas.datacontract.org/2004/07/TamagotchiDomain")]
-    [System.SerializableAttribute()]
-    public partial class Tamagot : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int GezondheidField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int HongerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime LeeftijdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NaamField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int SlaapField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int VervelingField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Gezondheid {
-            get {
-                return this.GezondheidField;
-            }
-            set {
-                if ((this.GezondheidField.Equals(value) != true)) {
-                    this.GezondheidField = value;
-                    this.RaisePropertyChanged("Gezondheid");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Honger {
-            get {
-                return this.HongerField;
-            }
-            set {
-                if ((this.HongerField.Equals(value) != true)) {
-                    this.HongerField = value;
-                    this.RaisePropertyChanged("Honger");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime Leeftijd {
-            get {
-                return this.LeeftijdField;
-            }
-            set {
-                if ((this.LeeftijdField.Equals(value) != true)) {
-                    this.LeeftijdField = value;
-                    this.RaisePropertyChanged("Leeftijd");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Naam {
-            get {
-                return this.NaamField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NaamField, value) != true)) {
-                    this.NaamField = value;
-                    this.RaisePropertyChanged("Naam");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Slaap {
-            get {
-                return this.SlaapField;
-            }
-            set {
-                if ((this.SlaapField.Equals(value) != true)) {
-                    this.SlaapField = value;
-                    this.RaisePropertyChanged("Slaap");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Verveling {
-            get {
-                return this.VervelingField;
-            }
-            set {
-                if ((this.VervelingField.Equals(value) != true)) {
-                    this.VervelingField = value;
-                    this.RaisePropertyChanged("Verveling");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Tamagotchi", Namespace="http://schemas.datacontract.org/2004/07/TamoService")]
     [System.SerializableAttribute()]
     public partial class Tamagotchi : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -167,6 +26,9 @@ namespace TamagotchiWPF.ServiceReference1 {
         private bool CrazyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime GeboorteTijdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int GezondheidField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -176,7 +38,7 @@ namespace TamagotchiWPF.ServiceReference1 {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime LeeftijdField;
+        private System.Nullable<System.DateTime> LastActionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool MunchiesField;
@@ -189,6 +51,9 @@ namespace TamagotchiWPF.ServiceReference1 {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> SterfTijdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int VervelingField;
@@ -217,6 +82,19 @@ namespace TamagotchiWPF.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime GeboorteTijd {
+            get {
+                return this.GeboorteTijdField;
+            }
+            set {
+                if ((this.GeboorteTijdField.Equals(value) != true)) {
+                    this.GeboorteTijdField = value;
+                    this.RaisePropertyChanged("GeboorteTijd");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int Gezondheid {
             get {
                 return this.GezondheidField;
@@ -256,14 +134,14 @@ namespace TamagotchiWPF.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime Leeftijd {
+        public System.Nullable<System.DateTime> LastAction {
             get {
-                return this.LeeftijdField;
+                return this.LastActionField;
             }
             set {
-                if ((this.LeeftijdField.Equals(value) != true)) {
-                    this.LeeftijdField = value;
-                    this.RaisePropertyChanged("Leeftijd");
+                if ((this.LastActionField.Equals(value) != true)) {
+                    this.LastActionField = value;
+                    this.RaisePropertyChanged("LastAction");
                 }
             }
         }
@@ -321,6 +199,19 @@ namespace TamagotchiWPF.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> SterfTijd {
+            get {
+                return this.SterfTijdField;
+            }
+            set {
+                if ((this.SterfTijdField.Equals(value) != true)) {
+                    this.SterfTijdField = value;
+                    this.RaisePropertyChanged("SterfTijd");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int Verveling {
             get {
                 return this.VervelingField;
@@ -347,6 +238,12 @@ namespace TamagotchiWPF.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAge", ReplyAction="http://tempuri.org/IService1/GetAgeResponse")]
+        int GetAge(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAge", ReplyAction="http://tempuri.org/IService1/GetAgeResponse")]
+        System.Threading.Tasks.Task<int> GetAgeAsync(int Id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InitTimer", ReplyAction="http://tempuri.org/IService1/InitTimerResponse")]
         void InitTimer();
         
@@ -354,10 +251,10 @@ namespace TamagotchiWPF.ServiceReference1 {
         System.Threading.Tasks.Task InitTimerAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddTamagotchi", ReplyAction="http://tempuri.org/IService1/AddTamagotchiResponse")]
-        void AddTamagotchi(TamagotchiWPF.ServiceReference1.Tamagot tam);
+        void AddTamagotchi(TamagotchiDomain.Tamagot tam);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddTamagotchi", ReplyAction="http://tempuri.org/IService1/AddTamagotchiResponse")]
-        System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiWPF.ServiceReference1.Tamagot tam);
+        System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiDomain.Tamagot tam);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTamagotchi", ReplyAction="http://tempuri.org/IService1/GetTamagotchiResponse")]
         TamagotchiWPF.ServiceReference1.Tamagotchi GetTamagotchi(int Id);
@@ -429,6 +326,14 @@ namespace TamagotchiWPF.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
+        public int GetAge(int Id) {
+            return base.Channel.GetAge(Id);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetAgeAsync(int Id) {
+            return base.Channel.GetAgeAsync(Id);
+        }
+        
         public void InitTimer() {
             base.Channel.InitTimer();
         }
@@ -437,11 +342,11 @@ namespace TamagotchiWPF.ServiceReference1 {
             return base.Channel.InitTimerAsync();
         }
         
-        public void AddTamagotchi(TamagotchiWPF.ServiceReference1.Tamagot tam) {
+        public void AddTamagotchi(TamagotchiDomain.Tamagot tam) {
             base.Channel.AddTamagotchi(tam);
         }
         
-        public System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiWPF.ServiceReference1.Tamagot tam) {
+        public System.Threading.Tasks.Task AddTamagotchiAsync(TamagotchiDomain.Tamagot tam) {
             return base.Channel.AddTamagotchiAsync(tam);
         }
         

@@ -15,7 +15,9 @@ namespace TamagotchiWeb.ViewModels
         {
             Id = t.Id;
             Naam = t.Naam;
-            Leeftijd = t.Leeftijd;
+            GeboorteTijd = t.GeboorteTijd;
+            SterfTijd = t.SterfTijd;
+            LastAction = t.LastAction;
             Honger = t.Honger;
             Slaap = t.Slaap;
             Verveling = t.Verveling;
@@ -33,7 +35,11 @@ namespace TamagotchiWeb.ViewModels
         public string Naam { get; set; }
 
         [Required]
-        public DateTime Leeftijd { get; set; }
+        public DateTime GeboorteTijd { get; set; }
+
+        public DateTime? SterfTijd { get; set; }
+
+        public DateTime? LastAction { get; set; }
 
 
         [Required]
@@ -49,5 +55,7 @@ namespace TamagotchiWeb.ViewModels
         public int Gezondheid { get; set; }
         
         public string Status { get; set; }
+
+        public int Leeftijd { get; set; }
     }
 }

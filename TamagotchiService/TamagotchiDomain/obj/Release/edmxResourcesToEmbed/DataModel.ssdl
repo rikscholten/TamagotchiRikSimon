@@ -6,11 +6,13 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Naam" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Leeftijd" Type="datetime" Nullable="false" />
+    <Property Name="GeboorteTijd" Type="datetime" Nullable="false" />
     <Property Name="Honger" Type="int" Nullable="false" />
     <Property Name="Slaap" Type="int" Nullable="false" />
     <Property Name="Verveling" Type="int" Nullable="false" />
     <Property Name="Gezondheid" Type="int" Nullable="false" />
+    <Property Name="SterfTijd" Type="datetime2" Precision="7" />
+    <Property Name="LastAction" Type="datetime2" Precision="7" />
   </EntityType>
   <EntityContainer Name="TamagotchiSimonRikModelStoreContainer">
     <EntitySet Name="Tamagot" EntityType="Self.Tamagot" Schema="dbo" store:Type="Tables" />
