@@ -65,7 +65,6 @@ namespace TamagotchiWeb.Controllers
                 service.PerformAction(id, actie);
                 ViewModels.Tamagotchi DetailVM = new ViewModels.Tamagotchi(service.GetTamagotchi(id));
                 DetailVM.Status = service.GetStatus(id);
-
                 return View(DetailVM);
             }
 
@@ -75,6 +74,10 @@ namespace TamagotchiWeb.Controllers
                 DetailVM.Status = service.GetStatus(id);
                 return View(DetailVM);
             }
+
+
+
+
 
             return View();
 
